@@ -32,3 +32,4 @@ gesondert auf persoenliche Angaben und Rechte geprueft werden.
 | `kira-unified-core-v1.1` | `KIRA_UNIFIED_CORE_1_1.zip` | `modules/KIRA_UNIFIED_CORE/` |
 | `kira-unified-core-v1.2` | `KIRA_UNIFIED_CORE_1_2.zip` | `modules/KIRA_UNIFIED_CORE/` |
 | `kira-unified-core-v1.3` | `KIRA_UNIFIED_CORE_1_3.zip` | `modules/KIRA_UNIFIED_CORE/` |
+| `kira-unified-core-v1.4` | `KIRA_UNIFIED_CORE_1_4.zip` | `modules/KIRA_UNIFIED_CORE/` |
