@@ -35,6 +35,8 @@ WILLI_RELATION_ALIASES = {
 }
 RELATION_OPS.update({alias: 'neutral_relations' for alias in WILLI_RELATION_ALIASES})
 SENSOR_OPS = {'sensor_rein':'sensor','sensor_paket':'sensor','sensor_nachsehen':'sensor'}
+WILLI_SENSOR_ALIASES = {'auge_auf':'sensor_rein', 'nase_schnueffeln':'sensor_paket', 'was_war':'sensor_nachsehen'}
+SENSOR_OPS.update({alias:'sensor' for alias in WILLI_SENSOR_ALIASES})
 PATTERN_OPS = {'find_muster':'pattern','bau_makro':'pattern','zeig_makro':'pattern'}
 assert len(ALL)==39
 
@@ -49,7 +51,7 @@ def invoke(name, args, runtime):
     def number(v):
         if type(v) is not Fraction:raise ValueError(f'{name} expects a number')
         return v
-    name = WILLI_RELATION_ALIASES.get(name, name)
+    name = WILLI_SENSOR_ALIASES.get(name, WILLI_RELATION_ALIASES.get(name, name))
     if name in SENSOR_OPS:
         if name=='sensor_rein':
             arity(1); result=runtime.bridge.sensors.ingest(json.loads(string(args[0])))
