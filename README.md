@@ -20,3 +20,4 @@ gesondert auf persoenliche Angaben und Rechte geprueft werden.
 | `uui-core-v0.2` | `UUI_CORE_0_2.zip` | `modules/UUI_CORE/` |
 | `uui-core-v0.3` | `UUI_CORE_0_3.zip` | `modules/UUI_CORE/` |
 | `uui-core-v0.4` | `UUI_CORE_0_4.zip` | `modules/UUI_CORE/` |
+| `uui-core-v0.5` | `UUI_CORE_0_5.zip` | `modules/UUI_CORE/` |

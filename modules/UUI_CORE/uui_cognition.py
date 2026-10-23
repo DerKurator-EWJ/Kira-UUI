@@ -1,6 +1,7 @@
 """UUI 0.4 cognitive standard library. Unimplemented operations fail explicitly."""
 from fractions import Fraction
 from dataclasses import dataclass
+import uuid
 import json
 
 FAMILIES = {
@@ -32,9 +33,49 @@ def invoke(name, args, runtime):
     def number(v):
         if type(v) is not Fraction:raise ValueError(f'{name} expects a number')
         return v
+    # Evidence functions return JSON strings because UUI 0.4 has no record/list type.
+    # All observations are explicitly attributed; inquiries do not invent answers.
+    if name=='was_weisst_du':
+        arity(2); subject,predicate=map(string,args)
+        records=runtime.bridge.evidence.evidence_for(subject,predicate)
+        return json.dumps({'subject':subject,'predicate':predicate,'evidence':records,
+                           'known':bool(records)},ensure_ascii=False,sort_keys=True)
+    if name=='woher_weisst_du':
+        arity(2); subject,predicate=map(string,args)
+        records=runtime.bridge.evidence.evidence_for(subject,predicate)
+        return json.dumps({'subject':subject,'predicate':predicate,
+                           'sources':[{'event_id':r['event_id'],'source_type':r['source_type'],
+                                       'source_ref':r['source_ref'],'confidence':r['confidence'],
+                                       'status':r['status']} for r in records]},ensure_ascii=False,sort_keys=True)
+    if name=='warum_nicht':
+        if len(args)==1:
+            return 'Welche Alternative oder Gegenbegruendung gibt es zu: '+str(args[0])
+        arity(2); subject,predicate=map(string,args)
+        ident=runtime.bridge.ask_about(subject,predicate)
+        return json.dumps({'inquiry_id':ident,'subject':subject,'predicate':predicate,
+                           'status':'open','kind':'unknown'},ensure_ascii=False,sort_keys=True)
+    if name=='lern_draus':
+        # A supplied observation is recorded as evidence, not automatically promoted
+        # to truth. Contradictions remain open for human/system review.
+        arity(5)
+        subject,predicate,value,source_ref,event_id=args
+        for x in (subject,predicate,value,source_ref,event_id):string(x)
+        result=runtime.bridge.evidence.record(event_id=event_id,subject=subject,
+            predicate=predicate,value=value,source_type='external_claim',source_ref=source_ref)
+        runtime.bridge.inquiry.sync_reviews()
+        return json.dumps({'recorded':True,'source_type':'external_claim',**result},ensure_ascii=False,sort_keys=True)
+    if name=='was_waere_wenn':
+        # Isolated counterfactual arithmetic; does not mutate runtime or evidence.
+        arity(3); initial=number(args[0]);delta=number(args[1]);operation=string(args[2])
+        if operation not in ('plus','minus','mal','geteilt'):
+            raise ValueError('was_waere_wenn operation must be plus/minus/mal/geteilt')
+        if operation=='geteilt' and delta==0:raise ValueError('Division by zero')
+        result={'plus':lambda:initial+delta,'minus':lambda:initial-delta,
+                'mal':lambda:initial*delta,'geteilt':lambda:initial/delta}[operation]()
+        return result
     if name=='was_ist_das':
         arity(1);return 'offen: '+str(args[0])
-    if name=='warum' or name=='warum_nicht':
+    if name=='warum':
         arity(1);return ('Welche Begruendung fehlt fuer: ' if name=='warum' else 'Welche Alternative oder Gegenbegruendung gibt es zu: ')+str(args[0])
     if name=='wie_sicher':
         arity(1);x=number(args[0]);return x>=0 and x<=1

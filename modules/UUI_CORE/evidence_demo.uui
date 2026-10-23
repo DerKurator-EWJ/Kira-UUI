@@ -1,0 +1,6 @@
+es_sei gespeichert = lern_draus("objekt_a", "farbe", "blau", "kamera_test", "ereignis_001")
+hier gespeichert
+hier was_weisst_du("objekt_a", "farbe")
+hier woher_weisst_du("objekt_a", "farbe")
+hier warum_nicht("objekt_a", "gewicht")
+hier was_waere_wenn(1 / 3, 2 / 3, "plus")
