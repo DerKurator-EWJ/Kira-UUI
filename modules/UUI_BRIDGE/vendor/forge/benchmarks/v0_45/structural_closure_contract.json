@@ -1,0 +1,22 @@
+{
+  "format": "equinox-forge-structural-closure-contract-v1",
+  "version": "0.45",
+  "purpose": "Verify that a canonical numeric concept ID can address local and ancestor-rooted relational information without copying inherited semantic triples into the canonical graph.",
+  "frozen_invariants": [
+    "closure traversal is numeric and follows configured inheritance relation IDs",
+    "canonical semantic triple count is unchanged by closure materialization",
+    "inherited facts retain their original subject as origin_subject_id",
+    "local facts have inheritance_depth 0",
+    "parent facts are reachable at depth 1 and grandparent facts at depth 2",
+    "identical effective facts reachable from multiple hierarchy levels resolve to the nearest origin in the closure view",
+    "multiple child concepts may reference the same single stored ancestor fact",
+    "insertion-order reversal leaves the structural closure digest unchanged",
+    "inheritance cycles terminate without recursive expansion"
+  ],
+  "non_claims": [
+    "v0.45 does not assert that every ancestor relation is semantically inheritable",
+    "v0.45 does not create recursive macro IDs",
+    "v0.45 does not change RuntimeCognition",
+    "v0.45 does not perform teacher ontology extraction"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "format": "equinox-forge-macro-aware-numeric-runtime-contract-v1",
+  "version": "0.49",
+  "requirements": {
+    "answers_must_match_v048_specific_to_general_runtime": true,
+    "local_specificity_must_be_checked_before_macro_routing": true,
+    "macro_shortcuts_must_be_compile_time_validated_against_v048": true,
+    "macro_routing_must_reduce_runtime_hierarchy_work": true,
+    "canonical_semantic_graph_must_not_be_rewritten": true,
+    "runtime_must_be_db_independent_after_pack_export": true,
+    "unvalidated_macro_relations_must_not_gain_runtime_authority": true,
+    "macro_runtime_pack_must_be_digest_protected": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "digest": "5278ca00251d6e2db62fffab56c08df777445ec980b0ceb10a9c95e0b814b45c",
+  "effective_meta_fact_count": 5,
+  "levels_built": 2,
+  "local_meta_fact_count": 3,
+  "macro_count": 3,
+  "membership_count": 10,
+  "potential_reference_savings": 4,
+  "predicate_ready_macro_count": 3
+}

@@ -1,0 +1,27 @@
+{
+  "action_resolved_values": 3,
+  "controls": {
+    "action_macro_matches_family_semantics": true,
+    "candidate_space_reduced_vs_unindexed_relation_scan": true,
+    "no_false_speedup_claim_vs_existing_family_index": true,
+    "property_macro_matches_family_semantics": true,
+    "relation_macro_is_general_numeric_query_handle": true,
+    "root_macro_is_union_of_child_relation_macros": true
+  },
+  "facet_count": 8,
+  "format": "equinox-relation-macro-runtime-v1",
+  "pack_digest": "bfe071e39d39a6c0792bb7bc1f874d64c07020033115a121c2163584fd4a24e8",
+  "property_resolved_values": 3,
+  "relation_macro_count": 3,
+  "relation_macro_levels": 2,
+  "root_resolved_values": 6,
+  "version": "0.53",
+  "work": {
+    "candidate_reduction_vs_unindexed_scan": 0.5,
+    "macro_beats_specialized_family_index": false,
+    "macro_matches_specialized_family_index_candidate_count": true,
+    "property_family_index_candidates": 4,
+    "property_macro_candidates": 4,
+    "unindexed_relation_space_candidates": 8
+  }
+}

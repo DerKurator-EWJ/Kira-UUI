@@ -1,0 +1,20 @@
+{
+  "version": "0.36",
+  "hypothesis": "[SLOT_0] wohnt in :: is_a>property",
+  "heldout_prompt": "Hund wohnt in",
+  "expected_stable_output": "Haus",
+  "expected_status_sequence": [
+    "candidate",
+    "stable",
+    "contested",
+    "quarantined",
+    "candidate",
+    "stable"
+  ],
+  "runtime_authority": {
+    "candidate": false,
+    "stable": true,
+    "contested": false,
+    "quarantined": false
+  }
+}

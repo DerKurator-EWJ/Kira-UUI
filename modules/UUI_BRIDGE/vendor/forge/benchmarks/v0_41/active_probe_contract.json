@@ -1,0 +1,23 @@
+{
+  "format": "equinox-forge-v0.41-active-probe-contract-v1",
+  "selection_scope": "known-prompt-pool-hidden-answers",
+  "runtime_changed": false,
+  "release_setting": {
+    "entities": 32,
+    "core_fact_candidates": 128,
+    "query_budget": 64,
+    "seed_queries": 32,
+    "random_trials": 5,
+    "teacher_seed": 3901,
+    "random_seed": 4110
+  },
+  "required_invariants": {
+    "selector_uses_teacher_answer_before_selection": false,
+    "selector_uses_expected_labels": false,
+    "active_unique_teacher_queries_equal_budget": true,
+    "fixed_unique_teacher_queries_equal_budget": true,
+    "all_random_unique_teacher_queries_equal_budget": true,
+    "active_opaque_relation_abstention_min": 1.0,
+    "active_outside_domain_abstention_min": 1.0
+  }
+}

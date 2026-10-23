@@ -1,0 +1,237 @@
+{
+  "claims": {
+    "additional_teacher_queries_for_v040_treatment": 0,
+    "candidate_scores_modified_by_authority": false,
+    "extraction_coverage_improved": false,
+    "general_world_model_claim": false,
+    "recompile_for_v040_treatment": false,
+    "same_compiled_pack_as_v039_treatment": true
+  },
+  "compileall": true,
+  "format": "equinox-forge-release-validation-v0.40",
+  "regression_tests": {
+    "execution_note": "All 44 test files were executed. The suite was run in bounded blocks because the three local neural teacher tests can exceed the outer session window when combined; each slow test was executed individually and passed.",
+    "failed": 0,
+    "passed": 44,
+    "test_files": [
+      "test_baseline_gauntlet_v031.py",
+      "test_behaviour_retention.py",
+      "test_composition_lifecycle_v036.py",
+      "test_consensus_stability.py",
+      "test_db_migration_v02.py",
+      "test_derived_macro_hierarchy.py",
+      "test_engineering_v030.py",
+      "test_evidence_backed_novel_entity_v033.py",
+      "test_exact_context_authority_v040.py",
+      "test_exception_consensus.py",
+      "test_exception_induction.py",
+      "test_forge.py",
+      "test_frame_schema_induction.py",
+      "test_generalization.py",
+      "test_generalization_ladder.py",
+      "test_global_lineage_consensus_v038.py",
+      "test_hf_adapter.py",
+      "test_hidden_state.py",
+      "test_hierarchical_frame_transfer.py",
+      "test_incremental_dependency.py",
+      "test_language_evidence.py",
+      "test_macro_discovery.py",
+      "test_mechanism_attribution.py",
+      "test_pareto_sweep.py",
+      "test_real_teacher_domain_trial_v039.py",
+      "test_rebuild_engine.py",
+      "test_recursive_prototype_hierarchy.py",
+      "test_relation_composition_induction_v035.py",
+      "test_relation_composition_v034.py",
+      "test_runtime_base_pack.py",
+      "test_runtime_cognition.py",
+      "test_runtime_compression.py",
+      "test_runtime_query_benchmark.py",
+      "test_sense_compiler.py",
+      "test_slot_prototype_induction.py",
+      "test_source_lineage_v037.py",
+      "test_specificity_resolution.py",
+      "test_support_gated_prediction_v032.py",
+      "test_teacher_behavior.py",
+      "test_text_teacher.py",
+      "test_tiny_causal_runtime.py",
+      "test_tiny_contextual_runtime.py",
+      "test_tiny_retention_runtime.py",
+      "test_typed_slot_admission.py"
+    ],
+    "tests": 44
+  },
+  "runtime_cognition_version": "0.40",
+  "v040_reference": {
+    "baseline_v039": {
+      "heldout_fact": {
+        "abstention_rate": 0.5,
+        "accuracy": 0.140625,
+        "cases": 64
+      },
+      "opaque_relation": {
+        "abstention_rate": 1.0,
+        "accuracy": 0.0,
+        "cases": 32
+      },
+      "outside_domain_control": {
+        "abstention_rate": 1.0,
+        "accuracy": 0.0,
+        "cases": 8
+      },
+      "paraphrase": {
+        "abstention_rate": 0.0,
+        "accuracy": 0.921875,
+        "cases": 64
+      },
+      "replay": {
+        "abstention_rate": 0.0,
+        "accuracy": 0.921875,
+        "cases": 64
+      }
+    },
+    "controls": {
+      "heldout_not_artificially_filled": true,
+      "opaque_relation_still_abstains": true,
+      "outside_domain_still_abstains": true,
+      "paraphrase_restored_without_recompile": true,
+      "replay_restored_without_recompile": true
+    },
+    "delta": {
+      "heldout_fact": {
+        "abstention_rate": 0.0,
+        "accuracy": 0.0
+      },
+      "opaque_relation": {
+        "abstention_rate": 0.0,
+        "accuracy": 0.0
+      },
+      "outside_domain_control": {
+        "abstention_rate": 0.0,
+        "accuracy": 0.0
+      },
+      "paraphrase": {
+        "abstention_rate": 0.0,
+        "accuracy": 0.078125
+      },
+      "replay": {
+        "abstention_rate": 0.0,
+        "accuracy": 0.078125
+      }
+    },
+    "failure_trace_retest": {
+      "authority_active": true,
+      "authority_candidates": 1,
+      "category": "replay",
+      "correct": true,
+      "expected": "savanne",
+      "matches_teacher": true,
+      "prediction_relation_checks": 64,
+      "prompt": "löwe lebt im",
+      "recall_nodes": 20,
+      "runtime_ms": 0.4218459998810431,
+      "teacher_top1": "savanne",
+      "top1": "savanne",
+      "top_candidates": [
+        {
+          "direct_score": 0.8803648152744792,
+          "recalled_score": 0.32662631020547517,
+          "score": 0.9194408142321264,
+          "surface": "savanne",
+          "transition_score": 0.0
+        },
+        {
+          "direct_score": 0.0,
+          "recalled_score": 0.9392020641449322,
+          "score": 0.9392020641449322,
+          "surface": "land",
+          "transition_score": 0.0
+        },
+        {
+          "direct_score": 0.0,
+          "recalled_score": 0.6990941134835231,
+          "score": 0.6990941134835231,
+          "surface": "wasser",
+          "transition_score": 0.0
+        },
+        {
+          "direct_score": 0.0,
+          "recalled_score": 0.3268071693954009,
+          "score": 0.3268071693954009,
+          "surface": "berg",
+          "transition_score": 0.0
+        }
+      ]
+    },
+    "format": "equinox-forge-v0.40-exact-context-authority-reference-v1",
+    "observations": [
+      "replay and suffix-paraphrase retention recover from 0.921875 to 1.0 without recompilation or additional teacher probes",
+      "heldout_fact behavior is unchanged, showing the authority tier does not manufacture missing knowledge",
+      "opaque relation and outside-domain abstention remain at 1.0",
+      "the lion habitat case is corrected even though the recalled Land candidate retains a numerically higher aggregate score"
+    ],
+    "policy": {
+      "enable_exact_context_authority": true,
+      "exact_context_authority_include_suffix": true,
+      "exact_context_authority_min_direct_score": 0.5
+    },
+    "same_compiled_pack_as_v039_baseline": true,
+    "v040": {
+      "heldout_fact": {
+        "abstention_rate": 0.5,
+        "accuracy": 0.140625,
+        "authority_activation_rate": 0.0,
+        "average_prediction_relation_checks": 32.0,
+        "average_recall_nodes": 20.5,
+        "cases": 64,
+        "runtime_ms_per_case": 0.3511006718497356
+      },
+      "opaque_relation": {
+        "abstention_rate": 1.0,
+        "accuracy": 0.0,
+        "authority_activation_rate": 0.0,
+        "average_prediction_relation_checks": 0.0,
+        "average_recall_nodes": 3.0,
+        "cases": 32,
+        "runtime_ms_per_case": 0.07240681264875093
+      },
+      "outside_domain_control": {
+        "abstention_rate": 1.0,
+        "accuracy": 0.0,
+        "authority_activation_rate": 0.0,
+        "average_prediction_relation_checks": 0.0,
+        "average_recall_nodes": 18.0,
+        "cases": 8,
+        "runtime_ms_per_case": 0.19949787542827835
+      },
+      "paraphrase": {
+        "abstention_rate": 0.0,
+        "accuracy": 1.0,
+        "authority_activation_rate": 1.0,
+        "average_prediction_relation_checks": 34.0,
+        "average_recall_nodes": 19.5,
+        "cases": 64,
+        "runtime_ms_per_case": 0.35073432795229564
+      },
+      "replay": {
+        "abstention_rate": 0.0,
+        "accuracy": 1.0,
+        "authority_activation_rate": 1.0,
+        "average_prediction_relation_checks": 34.0,
+        "average_recall_nodes": 19.5,
+        "cases": 64,
+        "runtime_ms_per_case": 0.3511609061774834
+      }
+    }
+  },
+  "version": "0.40.0",
+  "wheel": {
+    "bytes": 226819,
+    "dependency_note": "A nested venv did not inherit PyTorch from the parent /opt/pyvenv. The wheel was therefore benchmarked from a fresh --target install under the existing PyTorch runtime; this matches the optional domain-trial dependency boundary.",
+    "entrypoint_help": "passed",
+    "fresh_nested_venv_import": "passed",
+    "neural_benchmark_target_install": "passed",
+    "path": "dist/equinox_forge-0.40.0-py3-none-any.whl",
+    "sha256": "ca75287876e55ad9032ba09e8d0ee9e8716c8506f4ac572a34ff0b78cd883a8b"
+  }
+}

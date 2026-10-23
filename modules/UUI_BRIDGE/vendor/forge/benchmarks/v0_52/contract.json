@@ -1,0 +1,11 @@
+{
+  "version": "0.52",
+  "facet_count": 8,
+  "required_levels": 2,
+  "required_macro_count": 3,
+  "required_membership_count": 10,
+  "require_all_macros_predicate_ready": true,
+  "require_residual_recursive_inheritance": true,
+  "require_insertion_order_determinism": true,
+  "runtime_semantics_changed": false
+}

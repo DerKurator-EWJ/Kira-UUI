@@ -1,0 +1,18 @@
+{
+  "release": "0.30.0",
+  "cognitive_semantics_changed": false,
+  "validation": {
+    "regression_test_files": 34,
+    "regression_test_files_passed": 34,
+    "compileall": "pass",
+    "editable_install_in_host_environment": "pass",
+    "eqforge_entrypoint": "pass",
+    "wheel_build": "pass",
+    "release_consistency_test": "pass"
+  },
+  "notes": [
+    "The full regression set was executed in chunks because the execution harness terminated long aggregate subprocess runs.",
+    "A fresh isolated venv could not fetch build dependencies because the validation environment has no internet access; offline host-environment PEP 517 editable install and wheel build both succeeded.",
+    "No runtime cognition, hierarchy, specificity, exception, consensus, compiler, or extraction heuristic was intentionally changed in v0.30."
+  ]
+}

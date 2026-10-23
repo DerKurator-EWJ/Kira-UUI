@@ -1,0 +1,90 @@
+{
+  "benchmark": {
+    "controls": {
+      "all_lifecycle_transitions_match_contract": true,
+      "first_conflict_epoch_withdraws_runtime": true,
+      "first_recovery_epoch_does_not_immediately_restore": true,
+      "identical_conflict_rebuild_does_not_quarantine": true,
+      "identical_support_rebuild_does_not_promote": true,
+      "runtime_authority_tracks_lifecycle_not_single_run_induction": true,
+      "second_source_novel_conflict_epoch_quarantines": true,
+      "second_source_novel_recovery_epoch_restores": true,
+      "second_source_novel_support_epoch_promotes": true,
+      "single_clean_run_does_not_authorize_runtime": true
+    },
+    "runtime_top1": [
+      null,
+      "Haus",
+      null,
+      null,
+      null,
+      "Haus"
+    ],
+    "status_sequence": [
+      "candidate",
+      "stable",
+      "contested",
+      "quarantined",
+      "candidate",
+      "stable"
+    ]
+  },
+  "compileall": true,
+  "format": "equinox-forge-release-validation-v1",
+  "regression": {
+    "execution_note": "All 40 test files passed. The monolithic runner hit the outer execution window after 18 passing tests; the remaining tests, including all three slow local teacher-runtime tests, were then executed successfully in split runs. Lifecycle/database tests were rerun after the final source-novelty hardening.",
+    "tests_discovered": 40,
+    "tests_failed": 0,
+    "tests_passed": 40
+  },
+  "tests": [
+    "test_baseline_gauntlet_v031.py",
+    "test_behaviour_retention.py",
+    "test_composition_lifecycle_v036.py",
+    "test_consensus_stability.py",
+    "test_db_migration_v02.py",
+    "test_derived_macro_hierarchy.py",
+    "test_engineering_v030.py",
+    "test_evidence_backed_novel_entity_v033.py",
+    "test_exception_consensus.py",
+    "test_exception_induction.py",
+    "test_forge.py",
+    "test_frame_schema_induction.py",
+    "test_generalization.py",
+    "test_generalization_ladder.py",
+    "test_hf_adapter.py",
+    "test_hidden_state.py",
+    "test_hierarchical_frame_transfer.py",
+    "test_incremental_dependency.py",
+    "test_language_evidence.py",
+    "test_macro_discovery.py",
+    "test_mechanism_attribution.py",
+    "test_pareto_sweep.py",
+    "test_rebuild_engine.py",
+    "test_recursive_prototype_hierarchy.py",
+    "test_relation_composition_induction_v035.py",
+    "test_relation_composition_v034.py",
+    "test_runtime_base_pack.py",
+    "test_runtime_cognition.py",
+    "test_runtime_compression.py",
+    "test_runtime_query_benchmark.py",
+    "test_sense_compiler.py",
+    "test_slot_prototype_induction.py",
+    "test_specificity_resolution.py",
+    "test_support_gated_prediction_v032.py",
+    "test_teacher_behavior.py",
+    "test_text_teacher.py",
+    "test_tiny_causal_runtime.py",
+    "test_tiny_contextual_runtime.py",
+    "test_tiny_retention_runtime.py",
+    "test_typed_slot_admission.py"
+  ],
+  "version": "0.36.0",
+  "wheel": {
+    "bytes": 205517,
+    "filename": "equinox_forge-0.36.0-py3-none-any.whl",
+    "fresh_install": true,
+    "installed_benchmark": true,
+    "sha256": "e9a733061196720eddd6a705fb03989a1987597b63779cdbede005d68127f5e1"
+  }
+}

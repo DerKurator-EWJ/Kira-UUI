@@ -1,0 +1,126 @@
+{
+  "results": [
+    {
+      "n": 10000,
+      "kind": "periodic",
+      "mode": "v09",
+      "write_s": 0.0298,
+      "first_read_s": 0.1395,
+      "repeat_reads_s": 0.0004,
+      "consolidation_peak_python_bytes": 1529312,
+      "db_bytes": 352256,
+      "prediction": "33332"
+    },
+    {
+      "n": 10000,
+      "kind": "periodic",
+      "mode": "v10",
+      "write_s": 0.0282,
+      "first_read_s": 0.1497,
+      "repeat_reads_s": 0.0003,
+      "consolidation_peak_python_bytes": 4476,
+      "db_bytes": 352256,
+      "prediction": "33332"
+    },
+    {
+      "n": 10000,
+      "kind": "irregular",
+      "mode": "v09",
+      "write_s": 0.0272,
+      "first_read_s": 0.0532,
+      "repeat_reads_s": 0.0002,
+      "consolidation_peak_python_bytes": 1536894,
+      "db_bytes": 327680,
+      "prediction": "None"
+    },
+    {
+      "n": 10000,
+      "kind": "irregular",
+      "mode": "v10",
+      "write_s": 0.0261,
+      "first_read_s": 0.0006,
+      "repeat_reads_s": 0.0002,
+      "consolidation_peak_python_bytes": 3796,
+      "db_bytes": 327680,
+      "prediction": "None"
+    },
+    {
+      "n": 100000,
+      "kind": "periodic",
+      "mode": "v09",
+      "write_s": 0.3609,
+      "first_read_s": 0.8307,
+      "repeat_reads_s": 0.0004,
+      "consolidation_peak_python_bytes": 15201737,
+      "db_bytes": 3694592,
+      "prediction": "333332"
+    },
+    {
+      "n": 100000,
+      "kind": "periodic",
+      "mode": "v10",
+      "write_s": 0.265,
+      "first_read_s": 1.4275,
+      "repeat_reads_s": 0.0003,
+      "consolidation_peak_python_bytes": 4662,
+      "db_bytes": 3694592,
+      "prediction": "333332"
+    },
+    {
+      "n": 100000,
+      "kind": "irregular",
+      "mode": "v09",
+      "write_s": 0.3213,
+      "first_read_s": 0.6585,
+      "repeat_reads_s": 0.0002,
+      "consolidation_peak_python_bytes": 15257014,
+      "db_bytes": 3350528,
+      "prediction": "None"
+    },
+    {
+      "n": 100000,
+      "kind": "irregular",
+      "mode": "v10",
+      "write_s": 0.3073,
+      "first_read_s": 0.0007,
+      "repeat_reads_s": 0.0004,
+      "consolidation_peak_python_bytes": 5660,
+      "db_bytes": 3350528,
+      "prediction": "None"
+    },
+    {
+      "n": 1000000,
+      "kind": "periodic",
+      "mode": "v09",
+      "write_s": 3.0302,
+      "first_read_s": 8.7762,
+      "repeat_reads_s": 0.0007,
+      "consolidation_peak_python_bytes": 152896794,
+      "db_bytes": 38785024,
+      "prediction": "3333332"
+    },
+    {
+      "n": 1000000,
+      "kind": "periodic",
+      "mode": "v10",
+      "write_s": 2.9025,
+      "first_read_s": 12.0817,
+      "repeat_reads_s": 0.0003,
+      "consolidation_peak_python_bytes": 4800,
+      "db_bytes": 38785024,
+      "prediction": "3333332"
+    },
+    {
+      "n": 1000000,
+      "kind": "irregular",
+      "mode": "v10",
+      "write_s": 2.8122,
+      "first_read_s": 0.0007,
+      "repeat_reads_s": 0.0002,
+      "consolidation_peak_python_bytes": 4850,
+      "db_bytes": 34398208,
+      "prediction": "None"
+    }
+  ],
+  "note": "The 1M irregular v09 tracemalloc run exceeded the benchmark execution timeout and is omitted. Runs are single measurements, not statistical medians."
+}

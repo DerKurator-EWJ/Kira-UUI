@@ -1,0 +1,37 @@
+{
+  "all_benchmark_controls_pass": true,
+  "compileall": true,
+  "fresh_install": true,
+  "installed_benchmark": true,
+  "installed_benchmark_headline": {
+    "all_controls_pass": true,
+    "bridged_effective_lineage_count": 1,
+    "effective_correlated_lineage_count": 1,
+    "effective_independent_lineage_count": 2,
+    "final_status": "quarantined",
+    "lifecycle_status_sequence": [
+      "candidate",
+      "candidate",
+      "stable",
+      "contested",
+      "contested",
+      "quarantined"
+    ],
+    "raw_correlated_source_count": 3,
+    "raw_independent_source_count": 3,
+    "stable_runtime_top1": "Haus"
+  },
+  "milestone": "Source Lineage / Correlated Evidence",
+  "notes": [
+    "Unregistered sources remain independent self-roots for backward compatibility.",
+    "Composition induction counts independent lineage components when lineage metadata is supplied.",
+    "Composition lifecycle novelty uses lineage roots rather than raw source aliases.",
+    "Generic older consensus subsystems are not yet universally lineage-aware."
+  ],
+  "release": "0.37.0",
+  "tests_passed": 41,
+  "tests_total": 41,
+  "wheel": "equinox_forge-0.37.0-py3-none-any.whl",
+  "wheel_build": true,
+  "wheel_sha256": "4015fa9977b5a21ad764ec4a83bd0076773dee788342a3d9cab182fa09193064"
+}

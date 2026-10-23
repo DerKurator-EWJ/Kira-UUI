@@ -1,0 +1,35 @@
+{
+  "dataset_sha256": "9a68c0ae24c7db62c3f104ca75d63d541fd0d5cb4ebd970dd635570c77d9a118",
+  "delta_vs_v031": {
+    "exact_replay_top1": 0.0,
+    "heldout_relation_family_top1": 0.0,
+    "known_or_mixed_unsupported_rejection_rate": 1.0,
+    "known_parts_recombination_top1": 0.0,
+    "known_suffix_transfer_top1": 0.0,
+    "novel_entity_known_frame_top1": -1.0,
+    "novel_order_known_lexicon_top1": 0.0,
+    "unknown_rejection_rate": 0.75
+  },
+  "format": "equinox-forge-v0.32-support-gate-reference-v1",
+  "headline_metrics": {
+    "exact_replay_top1": 1.0,
+    "heldout_relation_family_top1": 0.0,
+    "known_or_mixed_unsupported_rejection_rate": 1.0,
+    "known_parts_recombination_top1": 1.0,
+    "known_suffix_transfer_top1": 1.0,
+    "novel_entity_known_frame_top1": 0.0,
+    "novel_order_known_lexicon_top1": 1.0,
+    "typed_frame_precision": 1.0,
+    "typed_frame_recall": 1.0,
+    "unknown_rejection_rate": 1.0
+  },
+  "notes": [
+    "Timing omitted from frozen cross-machine reference.",
+    "Cases are identical to the v0.31 gauntlet."
+  ],
+  "tradeoffs": [
+    "L4 lexical-only novel-entity retention drops from 1.0 to 0.0. This is intentional: the previous success is not distinguishable from the Stein false positive without semantic admission.",
+    "Held-out relation-family transfer remains unsupported; support gating does not invent missing knowledge."
+  ],
+  "version": "0.32"
+}

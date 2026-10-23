@@ -1,0 +1,29 @@
+{
+  "claims_excluded": [
+    "semantic human relation labels inferred automatically",
+    "external pretrained Hugging Face runtime validated",
+    "general-world-model equivalence"
+  ],
+  "format": "equinox-v051-relation-facet-contract-v1",
+  "purpose": "Make relation IDs first-class numeric objects and expose multi-valued inherited relation families without coarse PROPERTY/ACTION collisions.",
+  "required_controls": [
+    "coarse_predicate_ambiguity_no_longer_blocks_all_shortcuts",
+    "forge_db_off_before_runtime",
+    "macro_routing_is_actually_used",
+    "macro_routing_reduces_hierarchy_work",
+    "multi_valued_property_action_closure_is_lossless",
+    "recursive_macro_collapse_survives_faceting",
+    "relation_ids_are_first_class_numeric_objects",
+    "relation_ids_have_numeric_family_membership",
+    "teacher_off_before_runtime"
+  ],
+  "required_measurements": [
+    "relation_facet_count",
+    "relation_hierarchy_triple_count",
+    "family_query_accuracy",
+    "work.macro_shortcut_count",
+    "work.macro_routed_values",
+    "work.node_reduction_fraction"
+  ],
+  "version": "0.51"
+}

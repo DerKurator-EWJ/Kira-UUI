@@ -1,0 +1,44 @@
+{
+  "release": "0.34.0",
+  "milestone": "Evidence-Backed Relation Composition",
+  "runtime_cognition_version": "0.34",
+  "regression": {
+    "test_files": 38,
+    "passed": 38,
+    "failed": 0,
+    "execution_note": "Full suite covered in deterministic batches because the execution harness limits long aggregate calls."
+  },
+  "benchmark": {
+    "command": "eqforge-relation-compose --out <dir>",
+    "L0": 1.0,
+    "L1": 1.0,
+    "L2": 1.0,
+    "L3": 1.0,
+    "L4": 1.0,
+    "L5_composed_heldout_predictive_family": 1.0,
+    "opaque_L5_control": 0.0,
+    "graph_only_L5_control": 0.0,
+    "schema_only_L5_control": 0.0,
+    "runtime_ablation_L5_control": 0.0,
+    "positive": "Hund wohnt in -> Haus",
+    "incomplete_path_negative": "Stein wohnt in -> ABSTAIN",
+    "unmatched_pattern_negative": "Hund wohnt aus -> ABSTAIN"
+  },
+  "packaging": {
+    "wheel": "dist/equinox_forge-0.34.0-py3-none-any.whl",
+    "wheel_sha256": "a73aab1566a740fc6d47cfc17663eced41529fa612f827c6223a4cf23ef95159",
+    "fresh_venv_install": true,
+    "installed_eqforge_help": true,
+    "installed_relation_composition_benchmark": true
+  },
+  "artifacts": {
+    "benchmark_contract_sha256": "1d80d727557be2bf5d7ed0c13a67ecb03e3264af69d353d3b659cba5cabd5cb4",
+    "benchmark_reference_sha256": "49e692fdb89ed2d24965d4fc66980c5dc80eb6cd7dd97f302ffd45e3c6d79325"
+  },
+  "claims": {
+    "opaque_relation_inference": false,
+    "schema_automatically_induced": false,
+    "heldout_from_direct_predictive_training": true,
+    "composition_semantics_compiled_in_base": true
+  }
+}

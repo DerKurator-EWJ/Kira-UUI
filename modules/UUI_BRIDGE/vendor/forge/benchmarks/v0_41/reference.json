@@ -1,0 +1,92 @@
+{
+  "active": {
+    "full_abstention_rate": 0.125,
+    "full_accuracy": 0.6171875,
+    "opaque_relation_abstention_rate": 1.0,
+    "outside_domain_abstention_rate": 1.0,
+    "selection": {
+      "entities_covered": 32,
+      "max_queries_per_covered_entity": 2,
+      "min_queries_per_covered_entity": 2,
+      "relation_counts": {
+        "ability": 24,
+        "class": 8,
+        "habitat": 8,
+        "trait": 24
+      }
+    },
+    "teacher_cache_hits": 32,
+    "teacher_queries": 64,
+    "unqueried_abstention_rate": 0.25,
+    "unqueried_accuracy": 0.234375
+  },
+  "controls": {
+    "active_opaque_relation_abstention": 1.0,
+    "active_outside_domain_abstention": 1.0,
+    "active_unique_teacher_queries_equal_budget": true,
+    "all_random_unique_teacher_queries_equal_budget": true,
+    "fixed_unique_teacher_queries_equal_budget": true
+  },
+  "delta_active_vs_fixed": {
+    "full_abstention_rate": -0.125,
+    "full_accuracy": 0.046875,
+    "unqueried_accuracy": 0.09375
+  },
+  "delta_active_vs_random_mean": {
+    "full_accuracy": 0.043749999999999956,
+    "unqueried_accuracy": 0.0875
+  },
+  "fixed": {
+    "full_abstention_rate": 0.25,
+    "full_accuracy": 0.5703125,
+    "selection": {
+      "entities_covered": 32,
+      "max_queries_per_covered_entity": 2,
+      "min_queries_per_covered_entity": 2,
+      "relation_counts": {
+        "ability": 16,
+        "class": 16,
+        "habitat": 16,
+        "trait": 16
+      }
+    },
+    "teacher_queries": 64,
+    "unqueried_accuracy": 0.140625
+  },
+  "format": "equinox-forge-v0.41-active-probe-reference-v1",
+  "observations": [
+    "At the same 64 unique teacher-query budget, active selection improves full-domain accuracy over the balanced fixed schedule.",
+    "The gain comes from improved accuracy on facts that were not directly queried, not from extra teacher calls.",
+    "The active frontier prioritizes current abstentions; in the frozen run the second batch concentrates on ability and trait prompts while leaving currently answerable class/habitat prompts unqueried.",
+    "Opaque relation and outside-domain controls remain full abstentions."
+  ],
+  "random": {
+    "full_abstention_rate": {
+      "max": 0.2890625,
+      "mean": 0.2625,
+      "min": 0.2421875,
+      "population_stdev": 0.015309310892394862
+    },
+    "full_accuracy": {
+      "max": 0.5859375,
+      "mean": 0.5734375,
+      "min": 0.5625,
+      "population_stdev": 0.007967217989988727
+    },
+    "trials": 5,
+    "unqueried_accuracy": {
+      "max": 0.171875,
+      "mean": 0.146875,
+      "min": 0.125,
+      "population_stdev": 0.015934435979977454
+    }
+  },
+  "release_setting": {
+    "active_additional_queries": 32,
+    "candidate_core_facts": 128,
+    "domain_entities": 32,
+    "query_budget": 64,
+    "random_trials": 5,
+    "seed_queries": 32
+  }
+}

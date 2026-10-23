@@ -1,0 +1,25 @@
+{
+  "benchmark": "v0.43 marginal structural information-gain feasibility audit",
+  "runtime_changed": false,
+  "teacher": "same deterministic trained PyTorch domain teacher as v0.39-v0.42",
+  "core_facts": 128,
+  "shadow_holdout": {
+    "facts": 32,
+    "teacher_query_eligible": false,
+    "rule": "relation_index == (entity_index + 2) mod 4"
+  },
+  "diagnostics": [
+    "32-query seed",
+    "64-query v0.41 uncertainty selector",
+    "96-query all-selectable saturation ceiling",
+    "four relation-extreme 64-query schedules",
+    "multiple deterministic random 64-query schedules"
+  ],
+  "primary_question": "Can prompt selection alone alter top-1 decisions on the identical never-queryable shadow under the current v0.40 RuntimeCognition representation?",
+  "interpretation_rule": "confidence/score changes without top-1 or accuracy changes are not counted as structural transfer",
+  "required_controls": [
+    "shadow is never teacher-queryable",
+    "opaque relation remains abstained",
+    "outside-domain controls remain abstained"
+  ]
+}

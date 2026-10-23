@@ -1,0 +1,47 @@
+{
+  "format": "equinox-v047-teacher-structure-fixture-v1",
+  "description": "Concrete knowledge lives only in this teacher fixture. The extractor knows only generic parent/property/action probe operations.",
+  "seed_surfaces": ["eule", "falke", "hund", "wolf"],
+  "stop_surfaces": ["entität"],
+  "parent_probe_template": "{surface} ist ein",
+  "attribute_probes": [
+    {"relation_type": "property", "prompt_template": "{surface} hat"},
+    {"relation_type": "action", "prompt_template": "{surface} kann"}
+  ],
+  "training_pairs": [
+    ["eule ist ein", "vogel"],
+    ["falke ist ein", "vogel"],
+    ["hund ist ein", "säugetier"],
+    ["wolf ist ein", "säugetier"],
+    ["vogel ist ein", "tier"],
+    ["säugetier ist ein", "tier"],
+    ["tier ist ein", "lebewesen"],
+    ["lebewesen ist ein", "entität"],
+
+    ["vogel hat", "federn"],
+    ["vogel kann", "fliegen"],
+    ["säugetier hat", "fell"],
+    ["säugetier kann", "laufen"],
+    ["tier hat", "körper"],
+    ["tier kann", "bewegen"],
+    ["lebewesen hat", "zellen"],
+    ["lebewesen kann", "leben"]
+  ],
+  "expected_parent_edges": [
+    ["eule", "vogel"],
+    ["falke", "vogel"],
+    ["hund", "säugetier"],
+    ["wolf", "säugetier"],
+    ["vogel", "tier"],
+    ["säugetier", "tier"],
+    ["tier", "lebewesen"],
+    ["lebewesen", "entität"]
+  ],
+  "expected_roots": ["entität"],
+  "expected_leaf_chains": {
+    "eule": ["entität", "lebewesen", "tier", "vogel", "eule"],
+    "falke": ["entität", "lebewesen", "tier", "vogel", "falke"],
+    "hund": ["entität", "lebewesen", "tier", "säugetier", "hund"],
+    "wolf": ["entität", "lebewesen", "tier", "säugetier", "wolf"]
+  }
+}

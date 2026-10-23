@@ -1,0 +1,23 @@
+{
+  "canonical_triple_count": 7,
+  "closure_digest": "2edb011bd624d0489e99e43add40df6a89919d335bf05c7015d80dc0aaa44aa0",
+  "closure_direct_entry_count": 3,
+  "closure_entry_count": 11,
+  "closure_inherited_entry_count": 8,
+  "closure_root_count": 2,
+  "controls": {
+    "animal_fact_depth_is_two_for_owl": true,
+    "bird_fact_depth_is_one_for_children": true,
+    "canonical_triple_count_unchanged": true,
+    "closure_is_numeric_only": true,
+    "falcon_sees_bird_fly": true,
+    "inherited_fact_not_copied_to_owl": true,
+    "owl_keeps_local_nocturnal": true,
+    "owl_sees_animal_alive": true,
+    "owl_sees_bird_feathers": true,
+    "owl_sees_transitive_animal_class": true,
+    "shared_fact_keeps_same_origin": true
+  },
+  "format": "equinox-forge-structural-closure-reference-v1",
+  "version": "0.45"
+}

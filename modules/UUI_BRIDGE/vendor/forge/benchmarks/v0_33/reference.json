@@ -1,0 +1,114 @@
+{
+  "cases": {
+    "known_recombination": {
+      "prompt": "Hund jagt Maus",
+      "resolved_context_ids": [],
+      "semantic_admissions": 0,
+      "semantic_rejections": 0,
+      "support_gate_admissions": 1,
+      "support_gate_checks": 4,
+      "support_gate_rejections": 3,
+      "top1": "heute",
+      "top3": [
+        "heute",
+        "schnell",
+        "draußen"
+      ]
+    },
+    "semantic_stone": {
+      "prompt": "Stein ist ein",
+      "resolved_context_ids": [],
+      "semantic_admissions": 0,
+      "semantic_rejections": 2,
+      "support_gate_admissions": 0,
+      "support_gate_checks": 3,
+      "support_gate_rejections": 3,
+      "top1": null,
+      "top3": []
+    },
+    "semantic_wolf": {
+      "prompt": "Wolf ist ein",
+      "resolved_context_ids": [],
+      "semantic_admissions": 2,
+      "semantic_rejections": 0,
+      "support_gate_admissions": 2,
+      "support_gate_checks": 8,
+      "support_gate_rejections": 6,
+      "top1": "Tier",
+      "top3": [
+        "Tier",
+        "Haustier",
+        "Wesen"
+      ]
+    },
+    "surface_only_stone": {
+      "prompt": "Stein ist ein",
+      "resolved_context_ids": [],
+      "semantic_admissions": 0,
+      "semantic_rejections": 2,
+      "support_gate_admissions": 0,
+      "support_gate_checks": 3,
+      "support_gate_rejections": 3,
+      "top1": null,
+      "top3": []
+    },
+    "surface_only_wolf": {
+      "prompt": "Wolf ist ein",
+      "resolved_context_ids": [],
+      "semantic_admissions": 0,
+      "semantic_rejections": 2,
+      "support_gate_admissions": 0,
+      "support_gate_checks": 3,
+      "support_gate_rejections": 3,
+      "top1": null,
+      "top3": []
+    },
+    "unsupported_known_mix": {
+      "prompt": "Hund Baum",
+      "resolved_context_ids": [],
+      "semantic_admissions": 0,
+      "semantic_rejections": 0,
+      "support_gate_admissions": 0,
+      "support_gate_checks": 3,
+      "support_gate_rejections": 3,
+      "top1": null,
+      "top3": []
+    }
+  },
+  "controls": {
+    "evaluation_teacher_predictions_compiled": false,
+    "independent_semantic_support": {
+      "l4_top1": 1.0,
+      "purpose": "non-predictive semantic evidence is compiled from a source independent of the predictive teacher"
+    },
+    "predictive_train_contains_stein": false,
+    "predictive_train_contains_wolf": false,
+    "surface_only": {
+      "l4_top1": 0.0,
+      "purpose": "entity surfaces are compiled but no semantic relation authorizes substitution"
+    }
+  },
+  "elapsed_ms": 85.24410500012891,
+  "format": "equinox-forge-v0.33-novel-entity-admission-v1",
+  "headline_metrics": {
+    "known_recombination_preserved": true,
+    "l0_exact_replay_top1": 1.0,
+    "l1_suffix_transfer_top1": 1.0,
+    "l2_recombination_top1": 1.0,
+    "l3_novel_order_top1": 1.0,
+    "l4_evidence_backed_novel_entity_top1": 1.0,
+    "l5_heldout_relation_top1": 0.0,
+    "stone_semantic_rejected": true,
+    "surface_only_l4_top1": 0.0,
+    "surface_presence_alone_rejected": true,
+    "unsupported_known_mix_rejected": true,
+    "wolf_semantic_admitted": true
+  },
+  "notes": [
+    "v0.33 distinguishes entity knowledge from predictive-task exposure.",
+    "A surface being present somewhere in the BASE is not prediction authority.",
+    "Novel predictive substitutions require compiled independent semantic evidence above threshold.",
+    "The benchmark intentionally keeps L5 at zero: no new relation family is inferred by this mechanism."
+  ],
+  "version": "0.33"
+}

@@ -1,0 +1,31 @@
+{
+  "version": "0.38.0",
+  "release": "Global Lineage-Aware Consensus",
+  "regression_tests": {
+    "discovered": 42,
+    "passed": 42,
+    "failed": 0,
+    "execution_note": "The monolithic runner hit the external execution window after 18 passing tests. All remaining tests were executed in deterministic blocks; the three slow local tiny-model tests were executed individually. All 42 passed."
+  },
+  "compileall": true,
+  "wheel": {
+    "filename": "equinox_forge-0.38.0-py3-none-any.whl",
+    "sha256": "02154aca03dddf498a028fc5a0c1246e8312ebcf18dc2c7d87f4575dbca6717a",
+    "fresh_install": true
+  },
+  "installed_cli": {
+    "command": "eqforge-global-lineage",
+    "benchmark_reproduced": true,
+    "all_controls_pass": true
+  },
+  "headline_metrics": {
+    "correlated_relation_effective_sources": 1,
+    "correlated_relation_confidence": 0.6,
+    "independent_relation_effective_sources": 2,
+    "independent_relation_confidence": 0.84,
+    "sense_correlated_status": ["candidate"],
+    "sense_independent_status": ["stable"],
+    "exception_correlated_status": "candidate",
+    "exception_independent_status": "stable"
+  }
+}

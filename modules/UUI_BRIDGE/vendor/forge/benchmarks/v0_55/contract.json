@@ -1,0 +1,16 @@
+{
+  "format": "equinox-v055-unified-numeric-execution-kernel-contract-v1",
+  "version": "0.55",
+  "frozen": true,
+  "requirements": {
+    "one_flat_runtime_pack": true,
+    "one_public_resolve_subject_relation_api": true,
+    "no_embedded_historical_runtime_packs": true,
+    "runtime_import_does_not_load_historical_runtime_modules": true,
+    "all_v054_compiled_query_pairs_must_match": true,
+    "concept_macro_shortcut_semantics_are_preserved": true,
+    "relation_macro_route_semantics_are_preserved": true,
+    "specificity_and_inheritance_semantics_are_preserved": true,
+    "flat_pack_must_be_smaller_than_nested_v054_reference": true
+  }
+}

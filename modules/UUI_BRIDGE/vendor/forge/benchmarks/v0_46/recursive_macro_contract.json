@@ -1,0 +1,13 @@
+{
+  "format": "equinox-forge-recursive-macro-contract-v1",
+  "version": "0.46",
+  "requirements": {
+    "canonical_base_must_remain_unchanged": true,
+    "macro_ids_must_be_numeric_and_deterministic": true,
+    "minimum_levels": 2,
+    "higher_macro_members_must_be_macros": true,
+    "child_local_relations_must_drop_parent_owned_shared_facts": true,
+    "effective_child_signature_must_survive_recursive_compaction": true,
+    "potential_reference_savings_must_be_positive": true
+  }
+}

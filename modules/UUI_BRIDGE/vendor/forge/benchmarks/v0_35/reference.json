@@ -1,0 +1,96 @@
+{
+  "cases": {
+    "heldout_hund": {
+      "composition_admissions": 1,
+      "composition_matches": 1,
+      "composition_rejections": 0,
+      "prompt": "Hund wohnt in",
+      "top1": "Haus",
+      "top3": [
+        "Haus"
+      ]
+    },
+    "negative_stein": {
+      "composition_admissions": 0,
+      "composition_matches": 1,
+      "composition_rejections": 1,
+      "prompt": "Stein wohnt in",
+      "top1": null,
+      "top3": []
+    },
+    "unmatched_phrase": {
+      "composition_admissions": 0,
+      "composition_matches": 0,
+      "composition_rejections": 0,
+      "prompt": "Hund wohnt aus",
+      "top1": null,
+      "top3": []
+    }
+  },
+  "controls": {
+    "direct_observations_compiled_into_runtime": false,
+    "equal_competing_programs_are_not_arbitrarily_selected": true,
+    "heldout_hund_present_in_induction_observations": false,
+    "incomplete_coverage_is_not_stable": true,
+    "relation_phrase_supplied_to_inducer": false,
+    "same_source_is_not_independent_consensus": true
+  },
+  "format": "equinox-forge-v0.35-relation-composition-induction-reference-v1",
+  "headline_metrics": {
+    "competing_program_stable_schema_count": 0,
+    "heldout_hund_is_haus": true,
+    "l0_exact_replay_top1": 1.0,
+    "l1_suffix_transfer_top1": 1.0,
+    "l2_recombination_top1": 1.0,
+    "l3_novel_order_top1": 1.0,
+    "l4_evidence_backed_novel_entity_top1": 1.0,
+    "l5_auto_induced_relation_composition_top1": 1.0,
+    "same_source_stable_schema_count": 0,
+    "sparse_evidence_stable_schema_count": 0,
+    "stable_schema_count": 1,
+    "stein_abstains": true,
+    "unmatched_phrase_abstains": true
+  },
+  "stable_candidate": {
+    "coverage": 1.0,
+    "distinct_filler_count": 3,
+    "example_count": 3,
+    "mean_path_quality": 0.8343552,
+    "min_path_quality_observed": 0.83137536,
+    "path": [
+      {
+        "direction": "out",
+        "relation_type": "is_a"
+      },
+      {
+        "direction": "out",
+        "relation_type": "property"
+      }
+    ],
+    "pattern_tokens": [
+      "[SLOT_0]",
+      "wohnt",
+      "in"
+    ],
+    "slot_position": 0,
+    "source_count": 3,
+    "status": "stable",
+    "support_count": 3,
+    "support_margin": 3,
+    "supporting_prompts": [
+      "Katze wohnt in",
+      "Kaninchen wohnt in",
+      "Fuchs wohnt in"
+    ],
+    "supporting_sources": [
+      "teacher-a@1",
+      "teacher-b@1",
+      "teacher-c@1"
+    ],
+    "supporting_targets": [
+      "Haus",
+      "Bau",
+      "Bau"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "cognition_semantics": "unchanged-from-v0.30-engineering-freeze / runtime-cognition-v0.29",
+  "dataset_sha256": "9a68c0ae24c7db62c3f104ca75d63d541fd0d5cb4ebd970dd635570c77d9a118",
+  "format": "equinox-forge-v0.31-baseline-reference-v1",
+  "headline_metrics": {
+    "ambiguity_cluster_purity": 1.0,
+    "exact_replay_top1": 1.0,
+    "exception_lifecycle_contract": true,
+    "heldout_relation_family_top1": 0.0,
+    "known_or_mixed_unsupported_rejection_rate": 0.0,
+    "known_parts_recombination_top1": 1.0,
+    "known_suffix_transfer_top1": 1.0,
+    "novel_entity_known_frame_top1": 1.0,
+    "novel_order_known_lexicon_top1": 1.0,
+    "runtime_macro_route_work_reduction": 0.746875,
+    "stable_exception_transfer_top1": "Sauerstoff",
+    "typed_frame_precision": 1.0,
+    "typed_frame_recall": 1.0,
+    "unknown_rejection_rate": 0.25
+  },
+  "known_failures": [
+    "heldout_relation_family_transfer",
+    "unsupported_known_token_recombination_false_positives",
+    "untyped_open_frame_overgeneralization"
+  ],
+  "notes": [
+    "Timing metrics are intentionally excluded from the frozen cross-machine reference.",
+    "The v0.31 benchmark does not alter cognitive behavior; it exposes existing behavior."
+  ],
+  "version": "0.31"
+}

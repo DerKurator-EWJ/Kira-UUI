@@ -1,0 +1,46 @@
+{
+  "compileall": "passed",
+  "final_affected_regressions": {
+    "v046_recursive_macro_collapse": "passed",
+    "v048_specific_general_numeric_runtime": "passed",
+    "v049_macro_numeric_runtime": "passed"
+  },
+  "format": "equinox-forge-release-validation-v1",
+  "installed_cli": "passed",
+  "installed_reference_controls": "passed",
+  "macro_runtime_pack_digest": "d21c415f20e3b6389acbda9ef0061352ce109d89fef48c4b9c80e9dc224b53d5",
+  "numeric_runtime_v048_sha256": "cbe355ef447ef111a6ab6aa34f838da12f6105905d64765e3fd9a415a72dcf47",
+  "numeric_runtime_v048_unchanged": true,
+  "reference_controls": {
+    "answer_parity_with_v048": true,
+    "canonical_graph_not_rewritten": true,
+    "expected_answers_preserved": true,
+    "local_specificity_not_bypassed": true,
+    "macros_used_for_routing": true,
+    "material_work_reduction": true,
+    "positive_work_reduction": true,
+    "resolution_metadata_parity_with_v048": true,
+    "runtime_pack_is_db_independent": true
+  },
+  "reference_work": {
+    "baseline_nodes_touched": 38,
+    "macro_nodes_touched": 23,
+    "macro_routed_queries": 11,
+    "node_reduction_fraction": 0.39473684210526316,
+    "query_count": 12
+  },
+  "release": "Macro-Aware Numeric Routing",
+  "runtime_cognition_sha256": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+  "runtime_cognition_unchanged_from_v048": true,
+  "tests": {
+    "passed": 53,
+    "status": "passed",
+    "total": 53
+  },
+  "version": "0.49.0",
+  "wheel": {
+    "fresh_install": "passed",
+    "path": "dist/equinox_forge-0.49.0-py3-none-any.whl",
+    "sha256": "14c7a5a816a1692e66a5ff290704b6d06a6af37893684fe06348100820926d2c"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format": "equinox-forge-v0.35-relation-composition-induction-contract-v1",
+  "induction_examples": [
+    ["Katze wohnt in", "Haus"],
+    ["Kaninchen wohnt in", "Bau"],
+    ["Fuchs wohnt in", "Bau"]
+  ],
+  "heldout_prompt": "Hund wohnt in",
+  "expected": "Haus",
+  "negative_prompt": "Stein wohnt in",
+  "expected_negative": null,
+  "minimum_independent_sources": 2,
+  "minimum_support": 3,
+  "minimum_coverage": 0.75,
+  "required_controls": [
+    "same_source_not_stable",
+    "incomplete_coverage_not_stable",
+    "competing_programs_not_arbitrarily_selected",
+    "direct_observations_not_compiled"
+  ]
+}

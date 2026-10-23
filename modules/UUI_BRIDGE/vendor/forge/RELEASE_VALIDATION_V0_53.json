@@ -1,0 +1,38 @@
+{
+  "compileall": true,
+  "format": "equinox-forge-release-validation-v1",
+  "installed_relation_macro_runtime_trial": {
+    "pack_digest": "bfe071e39d39a6c0792bb7bc1f874d64c07020033115a121c2163584fd4a24e8",
+    "relation_macro_count": 3,
+    "relation_macro_levels": 2,
+    "facet_count": 8,
+    "property_macro_candidates": 4,
+    "unindexed_relation_space_candidates": 8,
+    "candidate_reduction_vs_unindexed_scan": 0.5,
+    "property_family_index_candidates": 4,
+    "macro_beats_specialized_family_index": false,
+    "macro_matches_specialized_family_index_candidate_count": true,
+    "property_macro_matches_family_semantics": true,
+    "action_macro_matches_family_semantics": true,
+    "root_macro_is_union_of_child_relation_macros": true
+  },
+  "runtime_hashes_unchanged_from_v0_52": {
+    "runtime_cognition.py": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+    "numeric_runtime.py": "cbe355ef447ef111a6ab6aa34f838da12f6105905d64765e3fd9a415a72dcf47",
+    "macro_numeric_runtime.py": "76f7aa3d9df1d124f4028e20a447da9f2e83d6cbf3b3cc0d9f1c99df0de33061",
+    "canonical_relation_facets.py": "056926cbf3a014ac116960abcb02e6065afca471af680733c35355574d4377ba",
+    "recursive_relation_collapse.py": "3386ae91cb7880782f58cd840bfa163ed936eefc768cd2bb27ebd0853ad596cc"
+  },
+  "scope_note": "v0.53 makes recursive relation-macro IDs executable as generic numeric predicate-set routers. It reduces candidate search versus an unindexed relation-space scan, but does not claim a speedup over the already-specialized v0.51 family-to-facet hash index on the frozen fixture.",
+  "tests": {
+    "failed": 0,
+    "passed": 57,
+    "total": 57
+  },
+  "version": "0.53.0",
+  "wheel": {
+    "installed": true,
+    "path": "dist/equinox_forge-0.53.0-py3-none-any.whl",
+    "sha256": "3784c4668dc6e0e29cb21112b8d289e79dfe0588e02d21c74b9dfa9c8ee2290e"
+  }
+}

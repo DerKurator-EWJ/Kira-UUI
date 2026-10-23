@@ -1,0 +1,32 @@
+{
+  "audit": {
+    "active_shadow_accuracy": 0.15625,
+    "random_shadow_accuracy_max": 0.15625,
+    "random_shadow_accuracy_min": 0.15625,
+    "random_trials": 24,
+    "saturated_full_accuracy": 0.7890625,
+    "saturated_shadow_accuracy": 0.15625,
+    "saturation_score_changes": 16,
+    "saturation_top1_changes": 0,
+    "seed_shadow_accuracy": 0.15625,
+    "selector_leverage_observed": false
+  },
+  "compileall": true,
+  "format": "equinox-forge-release-validation-v1",
+  "regression_tests": {
+    "discovered": 47,
+    "failed": 0,
+    "passed": 47
+  },
+  "runtime_byteidentical_to_v042": true,
+  "runtime_changed_in_release": false,
+  "runtime_cognition_version": "0.40",
+  "runtime_sha256": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+  "version": "0.43.0",
+  "wheel": {
+    "fresh_target_install": true,
+    "installed_smoke": true,
+    "path": "dist/equinox_forge-0.43.0-py3-none-any.whl",
+    "sha256": "4854eeec88d2eedbd239cedddd699c9adfb0fe2ca3e19450a071a7b26f098f8e"
+  }
+}

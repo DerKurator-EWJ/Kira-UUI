@@ -1,0 +1,21 @@
+{
+  "format": "equinox-forge-v0.32-support-gate-contract-v1",
+  "version": "0.32",
+  "source_benchmark": "v0.31 Baseline Gauntlet",
+  "dataset_sha256": "9a68c0ae24c7db62c3f104ca75d63d541fd0d5cb4ebd970dd635570c77d9a118",
+  "frozen_cases_reused": true,
+  "targets": {
+    "exact_replay_top1_min": 1.0,
+    "known_suffix_transfer_top1_min": 1.0,
+    "known_parts_recombination_top1_min": 1.0,
+    "novel_order_known_lexicon_top1_min": 1.0,
+    "unknown_rejection_rate_min": 1.0,
+    "known_or_mixed_unsupported_rejection_rate_min": 1.0,
+    "typed_frame_precision_min": 1.0,
+    "typed_frame_recall_min": 1.0
+  },
+  "explicit_non_target": {
+    "novel_entity_lexical_only_transfer": "May decrease because unseen entities require explicit semantic admission.",
+    "heldout_relation_family_transfer": "Not addressed by support gating."
+  }
+}

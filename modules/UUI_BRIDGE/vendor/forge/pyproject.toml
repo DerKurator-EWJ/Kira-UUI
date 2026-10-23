@@ -1,0 +1,63 @@
+[project]
+name = "equinox-forge"
+version = "0.56.0"
+description = "Model-independent canonical knowledge compiler for Equinox"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "safetensors>=0.4",
+]
+
+[project.scripts]
+eqforge = "equinox_forge.cli:main"
+eqforge-gauntlet = "equinox_forge.baseline_gauntlet:main"
+eqforge-support-gate = "equinox_forge.support_gate_benchmark:main"
+eqforge-novel-entity = "equinox_forge.novel_entity_admission:main"
+eqforge-relation-compose = "equinox_forge.relation_composition:main"
+eqforge-relation-induce = "equinox_forge.relation_composition_induction:main"
+eqforge-composition-lifecycle = "equinox_forge.composition_lifecycle:main"
+eqforge-source-lineage = "equinox_forge.source_lineage_benchmark:main"
+eqforge-global-lineage = "equinox_forge.global_lineage_consensus:main"
+eqforge-domain-trial = "equinox_forge.real_teacher_domain_trial:main"
+eqforge-exact-authority = "equinox_forge.exact_context_authority:main"
+eqforge-active-probe = "equinox_forge.active_probe_selection:main"
+eqforge-iterative-active = "equinox_forge.iterative_active_learning:main"
+eqforge-structural-gain-audit = "equinox_forge.structural_gain_audit:main"
+eqforge-canonical-id-space = "equinox_forge.canonical_id_space:main"
+eqforge-structural-closure = "equinox_forge.structural_closure:main"
+eqforge-recursive-macro = "equinox_forge.recursive_macro_collapse:main"
+eqforge-top-down-teacher = "equinox_forge.top_down_teacher_structure:main"
+eqforge-numeric-runtime = "equinox_forge.numeric_runtime:main"
+eqforge-macro-numeric-runtime = "equinox_forge.macro_numeric_runtime:main"
+eqforge-teacher-numeric-compiler = "equinox_forge.teacher_numeric_compiler:main"
+eqforge-relation-facets = "equinox_forge.relation_facet_compiler:main"
+eqforge-relation-macro = "equinox_forge.recursive_relation_collapse:main"
+eqforge-relation-macro-runtime = "equinox_forge.relation_macro_runtime:main"
+eqforge-unified-relation-runtime = "equinox_forge.unified_relation_runtime:main"
+eqforge-unified-numeric-kernel = "equinox_forge.unified_numeric_kernel:main"
+eqforge-direct-teacher-flat = "equinox_forge.direct_teacher_flat_compiler:main"
+
+[project.optional-dependencies]
+domain-trial = [
+  "torch>=2.1",
+]
+teacher-structure = [
+  "torch>=2.1",
+]
+hf-runtime = [
+  "torch>=2.1",
+  "transformers>=4.48,<5",
+  "tokenizers>=0.21",
+]
+
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["equinox_forge*"]
+exclude = ["adapters*", "examples*", "out*", "tests*", "benchmarks*", "tools*"]
+
+[tool.setuptools.package-data]
+equinox_forge = ["data/*.json"]

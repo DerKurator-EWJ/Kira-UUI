@@ -1,0 +1,118 @@
+{
+  "build": {
+    "digest": "4ca9cbef0f2c0898705569e06bc8fea3d7659a09f45523143ceac6038cd0cff2",
+    "format": "equinox-canonical-id-space-v1",
+    "identity_count": 8,
+    "node_identity_count": 5,
+    "relation_identity_count": 3,
+    "run_id": 1,
+    "surface_binding_count": 2,
+    "triple_count": 4,
+    "version": "0.44"
+  },
+  "controls": {
+    "closure_reaches_animal": true,
+    "german_and_english_surface_share_concept": true,
+    "numeric_id_is_stable_across_materialization": true,
+    "surface_strings_absent_from_triples": true,
+    "triples_are_numeric": true
+  },
+  "format": "equinox-forge-canonical-id-demo-v1",
+  "numeric_ids": {
+    "animal": 7838681198161708881,
+    "bird": 1313762100906578003,
+    "feathers": 265841723527105768,
+    "fly": 3630180508631560639,
+    "owl": 6934560758526335179
+  },
+  "owl_closure": [
+    {
+      "confidence": 1.0,
+      "evidence_count": 1,
+      "object_id": 265841723527105768,
+      "predicate_id": 3355816564566258947,
+      "score": 1.0,
+      "source_count": 1,
+      "subject_id": 1313762100906578003
+    },
+    {
+      "confidence": 1.0,
+      "evidence_count": 1,
+      "object_id": 7838681198161708881,
+      "predicate_id": 8365564852098129150,
+      "score": 1.0,
+      "source_count": 1,
+      "subject_id": 1313762100906578003
+    },
+    {
+      "confidence": 1.0,
+      "evidence_count": 1,
+      "object_id": 3630180508631560639,
+      "predicate_id": 7076364535103103543,
+      "score": 1.0,
+      "source_count": 1,
+      "subject_id": 6934560758526335179
+    },
+    {
+      "confidence": 1.0,
+      "evidence_count": 1,
+      "object_id": 1313762100906578003,
+      "predicate_id": 8365564852098129150,
+      "score": 1.0,
+      "source_count": 1,
+      "subject_id": 6934560758526335179
+    }
+  ],
+  "relation_ids": {
+    "action": 7076364535103103543,
+    "is_a": 8365564852098129150,
+    "property": 3355816564566258947
+  },
+  "surface_resolution": {
+    "Eule@de": [
+      6934560758526335179
+    ],
+    "owl@en": [
+      6934560758526335179
+    ]
+  },
+  "triples": [
+    {
+      "confidence": 1.0,
+      "evidence_count": 1,
+      "object_id": 265841723527105768,
+      "predicate_id": 3355816564566258947,
+      "score": 1.0,
+      "source_count": 1,
+      "subject_id": 1313762100906578003
+    },
+    {
+      "confidence": 1.0,
+      "evidence_count": 1,
+      "object_id": 7838681198161708881,
+      "predicate_id": 8365564852098129150,
+      "score": 1.0,
+      "source_count": 1,
+      "subject_id": 1313762100906578003
+    },
+    {
+      "confidence": 1.0,
+      "evidence_count": 1,
+      "object_id": 3630180508631560639,
+      "predicate_id": 7076364535103103543,
+      "score": 1.0,
+      "source_count": 1,
+      "subject_id": 6934560758526335179
+    },
+    {
+      "confidence": 1.0,
+      "evidence_count": 1,
+      "object_id": 1313762100906578003,
+      "predicate_id": 8365564852098129150,
+      "score": 1.0,
+      "source_count": 1,
+      "subject_id": 6934560758526335179
+    }
+  ],
+  "version": "0.44"
+}

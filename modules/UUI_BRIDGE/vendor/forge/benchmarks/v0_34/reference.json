@@ -1,0 +1,102 @@
+{
+  "cases": {
+    "composed_hund": {
+      "composition_admissions": 1,
+      "composition_matches": 1,
+      "composition_path_relation_checks": 2,
+      "composition_rejections": 0,
+      "prompt": "Hund wohnt in",
+      "top1": "Haus",
+      "top3": [
+        "Haus"
+      ]
+    },
+    "composed_stein": {
+      "composition_admissions": 0,
+      "composition_matches": 1,
+      "composition_path_relation_checks": 3,
+      "composition_rejections": 1,
+      "prompt": "Stein wohnt in",
+      "top1": null,
+      "top3": []
+    },
+    "graph_only_hund": {
+      "composition_admissions": 0,
+      "composition_matches": 0,
+      "composition_path_relation_checks": 0,
+      "composition_rejections": 0,
+      "prompt": "Hund wohnt in",
+      "top1": null,
+      "top3": []
+    },
+    "opaque_hund": {
+      "composition_admissions": 0,
+      "composition_matches": 0,
+      "composition_path_relation_checks": 0,
+      "composition_rejections": 0,
+      "prompt": "Hund wohnt in",
+      "top1": null,
+      "top3": []
+    },
+    "runtime_ablation_hund": {
+      "composition_admissions": 0,
+      "composition_matches": 0,
+      "composition_path_relation_checks": 0,
+      "composition_rejections": 0,
+      "prompt": "Hund wohnt in",
+      "top1": null,
+      "top3": []
+    },
+    "schema_only_hund": {
+      "composition_admissions": 0,
+      "composition_matches": 1,
+      "composition_path_relation_checks": 0,
+      "composition_rejections": 1,
+      "prompt": "Hund wohnt in",
+      "top1": null,
+      "top3": []
+    },
+    "unmatched_relation_phrase": {
+      "composition_admissions": 0,
+      "composition_matches": 0,
+      "composition_path_relation_checks": 0,
+      "composition_rejections": 0,
+      "prompt": "Hund wohnt aus",
+      "top1": null,
+      "top3": []
+    }
+  },
+  "controls": {
+    "direct_prediction_edge_for_hund_wohnt_in": false,
+    "evaluation_teacher_predictions_compiled": false,
+    "opaque_relation_family_remains_unsupported": true,
+    "predictive_train_contains_hund_wohnt_in": false,
+    "runtime_switch_ablation_restores_abstention": true,
+    "schema_without_complete_path_is_not_prediction_authority": true,
+    "semantic_graph_without_schema_is_not_prediction_authority": true
+  },
+  "format": "equinox-forge-v0.34-relation-composition-v1",
+  "headline_metrics": {
+    "composed_hund_is_haus": true,
+    "graph_only_l5_top1": 0.0,
+    "l0_exact_replay_top1": 1.0,
+    "l1_suffix_transfer_top1": 1.0,
+    "l2_recombination_top1": 1.0,
+    "l3_novel_order_top1": 1.0,
+    "l4_evidence_backed_novel_entity_top1": 1.0,
+    "l5_composed_heldout_prediction_family_top1": 1.0,
+    "opaque_l5_top1": 0.0,
+    "runtime_ablation_l5_top1": 0.0,
+    "schema_only_l5_top1": 0.0,
+    "stein_without_complete_path_abstains": true,
+    "unmatched_relation_phrase_abstains": true
+  },
+  "notes": [
+    "v0.34 does not infer an opaque relation family from lexical similarity.",
+    "The frozen L5 prompt is recovered only when an explicit stable composition schema and every non-predictive semantic premise are compiled into the BASE.",
+    "The held-out property is direct predictive exposure: the L5 prompt and its teacher prediction are not compiled.",
+    "Graph-only, schema-only, runtime-ablation, incomplete-path, and unmatched-pattern controls must abstain.",
+    "The schema is fixture-authored in v0.34. Automatic induction of composition schemas is deliberately a later research problem."
+  ],
+  "version": "0.34"
+}

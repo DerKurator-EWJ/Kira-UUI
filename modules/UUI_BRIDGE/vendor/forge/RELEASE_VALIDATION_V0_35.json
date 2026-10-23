@@ -1,0 +1,53 @@
+{
+  "artifacts": {
+    "benchmark_contract_sha256": "023a3f57040da409700cb7ed62b44ea126475269eea313b076f982b9f9082781",
+    "benchmark_reference_sha256": "a2113e580e0078218322a0034c023d7ad91b324effe938e491fc9621bf171169"
+  },
+  "benchmark": {
+    "L0": 1.0,
+    "L1": 1.0,
+    "L2": 1.0,
+    "L3": 1.0,
+    "L4": 1.0,
+    "L5_auto_induced_composition": 1.0,
+    "command": "eqforge-relation-induce --out <dir>",
+    "competing_program_stable_schema_count": 0,
+    "heldout_positive": "Hund wohnt in -> Haus",
+    "negative": "Stein wohnt in -> ABSTAIN",
+    "same_source_stable_schema_count": 0,
+    "sparse_evidence_stable_schema_count": 0,
+    "stable_schema_count": 1
+  },
+  "claims": {
+    "direct_induction_observations_compiled_into_runtime": false,
+    "heldout_entity_transfer": true,
+    "one_slot_pattern_automatically_induced": true,
+    "schema_fixture_authored": false,
+    "semantic_path_signature_automatically_induced": true,
+    "source_lineage_modeled": false,
+    "unrestricted_natural_language_semantics": false
+  },
+  "milestone": "Automatic Relation Composition Induction",
+  "packaging": {
+    "fresh_venv_install": true,
+    "installed_cli_entrypoints": [
+      "eqforge",
+      "eqforge-gauntlet",
+      "eqforge-support-gate",
+      "eqforge-novel-entity",
+      "eqforge-relation-compose",
+      "eqforge-relation-induce"
+    ],
+    "installed_relation_induction_benchmark": true,
+    "wheel": "dist/equinox_forge-0.35.0-py3-none-any.whl",
+    "wheel_sha256": "ef2148fe61eadb7bc984c5dbfa221a74b6a735e9ac45b3b5fb4f2783914df610"
+  },
+  "regression": {
+    "execution_note": "All tests covered in deterministic batches because the execution harness limits long aggregate calls.",
+    "failed": 0,
+    "passed": 39,
+    "test_files": 39
+  },
+  "release": "0.35.0",
+  "runtime_cognition_version": "0.34 (execution engine unchanged; v0.35 adds Forge-side induction)"
+}

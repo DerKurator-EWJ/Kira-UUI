@@ -1,0 +1,22 @@
+{
+  "action_resolved_values": 3,
+  "controls": {
+    "action_family_query_is_compiled_macro_alias": true,
+    "action_semantics_match_legacy_family_view": true,
+    "ordinary_scalar_relation_uses_same_unified_api": true,
+    "property_family_query_is_compiled_macro_alias": true,
+    "property_semantics_match_legacy_family_view": true,
+    "root_macro_still_resolves_union": true,
+    "runtime_does_not_depend_on_legacy_family_api": true,
+    "runtime_route_table_contains_no_symbolic_relation_names": true
+  },
+  "direct_macro_route_count": 3,
+  "family_alias_route_count": 2,
+  "format": "equinox-unified-numeric-relation-runtime-v1",
+  "pack_digest": "43dc36e0e602e985a03542bf335082a10dfa737de455da9ad69a3b3376a08e56",
+  "property_resolved_values": 3,
+  "root_resolved_values": 6,
+  "route_count": 15,
+  "scalar_route_count": 10,
+  "version": "0.54"
+}

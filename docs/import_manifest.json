@@ -75,5 +75,12 @@
     "module": "UUI_CORE",
     "sha256_original_zip": "8f3d251c80d4581d7d2e2a44d772c53d7ff2d8ab40dd81890051a11f850ef253",
     "files_in_zip": 383
+  },
+  {
+    "tag": "uui-bridge-v0.1",
+    "source": "UUI_BRIDGE_0_1.zip",
+    "module": "UUI_BRIDGE",
+    "sha256_original_zip": "bceda967ac74949f4dbe2dbb1892a853ecbb5bf8f94dcbc37a37166a1c4c01cc",
+    "files_in_zip": 342
   }
 ]

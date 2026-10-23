@@ -1,0 +1,33 @@
+{
+  "compileall": true,
+  "format": "equinox-forge-release-validation-v1",
+  "hf_environment": {
+    "external_pretrained_model_executed": false,
+    "static_local_model_inspection": true,
+    "static_model_type": "deepseek_v3",
+    "transformers_runtime_installed": false
+  },
+  "installed_compiler_trial": {
+    "controls_all_true": true,
+    "macro_shortcut_count": 0,
+    "node_reduction_fraction": 0.0,
+    "scalar_runtime_query_accuracy": 1.0,
+    "stored_teacher_fact_retention": 1.0
+  },
+  "runtime_hashes_unchanged_from_v0_49": {
+    "macro_numeric_runtime.py": "76f7aa3d9df1d124f4028e20a447da9f2e83d6cbf3b3cc0d9f1c99df0de33061",
+    "numeric_runtime.py": "cbe355ef447ef111a6ab6aa34f838da12f6105905d64765e3fd9a415a72dcf47",
+    "runtime_cognition.py": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d"
+  },
+  "tests": {
+    "failed": 0,
+    "passed": 54,
+    "total": 54
+  },
+  "version": "0.50.0",
+  "wheel": {
+    "installed": true,
+    "path": "dist/equinox_forge-0.50.0-py3-none-any.whl",
+    "sha256": "79bb3c5b76069d86adad8df3a35e5193e9c27a732ea885bbbdc28f80325e6a4e"
+  }
+}

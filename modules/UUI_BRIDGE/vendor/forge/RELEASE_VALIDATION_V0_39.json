@@ -1,0 +1,152 @@
+{
+  "claims": {
+    "cognition_changed_in_v039": false,
+    "external_pretrained_model_used": false,
+    "general_world_model_claim": false,
+    "teacher_is_computed_neural_model": true
+  },
+  "compileall": true,
+  "format": "equinox-forge-release-validation-v0.39",
+  "regression_tests": {
+    "execution_note": "The monolithic runner exceeded the outer session time window after 18 passes; all remaining tests were then executed in bounded blocks under the same PYTHONPATH, with the three slow neural teacher tests executed individually.",
+    "failed": 0,
+    "passed": 43,
+    "test_files": [
+      "test_baseline_gauntlet_v031.py",
+      "test_behaviour_retention.py",
+      "test_composition_lifecycle_v036.py",
+      "test_consensus_stability.py",
+      "test_db_migration_v02.py",
+      "test_derived_macro_hierarchy.py",
+      "test_engineering_v030.py",
+      "test_evidence_backed_novel_entity_v033.py",
+      "test_exception_consensus.py",
+      "test_exception_induction.py",
+      "test_forge.py",
+      "test_frame_schema_induction.py",
+      "test_generalization.py",
+      "test_generalization_ladder.py",
+      "test_global_lineage_consensus_v038.py",
+      "test_hf_adapter.py",
+      "test_hidden_state.py",
+      "test_hierarchical_frame_transfer.py",
+      "test_incremental_dependency.py",
+      "test_language_evidence.py",
+      "test_macro_discovery.py",
+      "test_mechanism_attribution.py",
+      "test_pareto_sweep.py",
+      "test_real_teacher_domain_trial_v039.py",
+      "test_rebuild_engine.py",
+      "test_recursive_prototype_hierarchy.py",
+      "test_relation_composition_induction_v035.py",
+      "test_relation_composition_v034.py",
+      "test_runtime_base_pack.py",
+      "test_runtime_cognition.py",
+      "test_runtime_compression.py",
+      "test_runtime_query_benchmark.py",
+      "test_sense_compiler.py",
+      "test_slot_prototype_induction.py",
+      "test_source_lineage_v037.py",
+      "test_specificity_resolution.py",
+      "test_support_gated_prediction_v032.py",
+      "test_teacher_behavior.py",
+      "test_text_teacher.py",
+      "test_tiny_causal_runtime.py",
+      "test_tiny_contextual_runtime.py",
+      "test_tiny_retention_runtime.py",
+      "test_typed_slot_admission.py"
+    ],
+    "tests": 43
+  },
+  "v039_reference": {
+    "categories": {
+      "heldout_fact": {
+        "average_recall_nodes": 20.5,
+        "average_relation_checks": 124.5,
+        "cases": 64,
+        "runtime_abstention_rate": 0.5,
+        "runtime_accuracy": 0.140625,
+        "runtime_teacher_top1_retention": 0.140625,
+        "teacher_accuracy": 1.0
+      },
+      "opaque_relation": {
+        "average_recall_nodes": 3.0,
+        "average_relation_checks": 11.0,
+        "cases": 32,
+        "runtime_abstention_rate": 1.0,
+        "runtime_accuracy": 0.0,
+        "runtime_teacher_top1_retention": 0.0,
+        "teacher_accuracy": 1.0
+      },
+      "outside_domain_control": {
+        "average_recall_nodes": 18.0,
+        "average_relation_checks": 82.0,
+        "cases": 8,
+        "runtime_abstention_rate": 1.0,
+        "runtime_accuracy": 0.0,
+        "runtime_teacher_top1_retention": 0.0,
+        "teacher_accuracy": 1.0
+      },
+      "paraphrase": {
+        "average_recall_nodes": 19.5,
+        "average_relation_checks": 121.5,
+        "cases": 64,
+        "runtime_abstention_rate": 0.0,
+        "runtime_accuracy": 0.921875,
+        "runtime_teacher_top1_retention": 0.921875,
+        "teacher_accuracy": 1.0
+      },
+      "replay": {
+        "average_recall_nodes": 19.5,
+        "average_relation_checks": 121.5,
+        "cases": 64,
+        "runtime_abstention_rate": 0.0,
+        "runtime_accuracy": 0.921875,
+        "runtime_teacher_top1_retention": 0.921875,
+        "teacher_accuracy": 1.0
+      }
+    },
+    "compiled_probe_facts": 64,
+    "direct_replay_top1_retention": 1.0,
+    "domain_entities": 32,
+    "failure_trace": {
+      "expected": "savanne",
+      "land_score_approx": 0.9392020641,
+      "prompt": "löwe lebt im",
+      "runtime_top1": "land",
+      "savanne_direct_score_approx": 0.8803648153,
+      "savanne_score_approx": 0.9194408142
+    },
+    "format": "equinox-forge-v0.39-domain-trial-reference-v1",
+    "observed_failure_modes": [
+      "full runtime associative recall can overrule an exact-context teacher prediction for minority targets",
+      "heldout teacher-known facts without extracted semantic support are mostly not recoverable",
+      "an entirely unprobed relation family is correctly unavailable rather than invented"
+    ],
+    "opaque_relation_facts": 32,
+    "outside_domain_abstention_rate": 1.0,
+    "pack_bytes": 12738,
+    "pack_nodes": 166,
+    "pack_relations": 256,
+    "pack_to_teacher_state_ratio": 0.13674571394832047,
+    "teacher": {
+      "parameters": 22183,
+      "training_accuracy": 1.0,
+      "training_epochs": 30,
+      "training_examples": 336,
+      "vocab_size": 91
+    },
+    "teacher_queries_for_compilation": 64,
+    "teacher_query_fraction_of_animal_fact_space": 0.4,
+    "teacher_state_bytes": 93151,
+    "uncompiled_core_facts": 64,
+    "version": "0.39"
+  },
+  "version": "0.39.0",
+  "wheel": {
+    "file": "equinox_forge-0.39.0-py3-none-any.whl",
+    "fresh_target_install": true,
+    "installed_domain_trial_smoke": true,
+    "sha256": "a8d4d8c23b69f5d8a637af487845a62b1dbefd8491c5368e8f022ae34a5d40d1"
+  }
+}

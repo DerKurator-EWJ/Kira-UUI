@@ -1,0 +1,11 @@
+{
+  "version": "0.38",
+  "correlated_relation_effective_sources": 1,
+  "correlated_relation_confidence": 0.6,
+  "independent_relation_effective_sources": 2,
+  "independent_relation_confidence": 0.84,
+  "sense_correlated_status": ["candidate"],
+  "sense_independent_status": ["stable"],
+  "exception_correlated_status": "candidate",
+  "exception_independent_status": "stable"
+}

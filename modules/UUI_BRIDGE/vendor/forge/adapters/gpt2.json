@@ -1,0 +1,59 @@
+{
+  "format": "equinox-forge-hf-adapter-v1",
+  "adapter_id": "hf-gpt2-v1",
+  "family": "gpt2",
+  "model_types": ["gpt2"],
+  "architectures": ["GPT2LMHeadModel"],
+  "modality": "text",
+  "q_strategy": "unicode_character",
+  "tokenizer": {"required": true, "mode": "huggingface-local"},
+  "tensor_roles": [
+    {
+      "role": "input_embeddings",
+      "candidates": ["transformer.wte.weight"],
+      "patterns": [],
+      "required": true,
+      "description": "Teacher token embedding matrix; used only as evidence source."
+    },
+    {
+      "role": "output_head",
+      "candidates": ["lm_head.weight"],
+      "patterns": [],
+      "required": false,
+      "description": "Optional output head. Tied-weight checkpoints may omit this tensor."
+    },
+    {
+      "role": "transformer_layers",
+      "candidates": [],
+      "patterns": ["transformer.h.*.*"],
+      "required": false,
+      "description": "Optional layer family for future runtime behaviour extraction."
+    }
+  ],
+  "extraction_channels": [
+    {
+      "name": "token_embedding_neighbors",
+      "enabled": true,
+      "requires_roles": ["input_embeddings"],
+      "runtime_required": false,
+      "description": "Sparse neighbour evidence from input embedding cosine similarity."
+    },
+    {
+      "name": "output_prediction_priors",
+      "enabled": true,
+      "requires_roles": ["output_head"],
+      "runtime_required": false,
+      "description": "Reserved for the next controlled prediction extractor."
+    },
+    {
+      "name": "runtime_hidden_states",
+      "enabled": true,
+      "requires_roles": [],
+      "runtime_required": true,
+      "description": "Requires executing the teacher on a probe corpus."
+    }
+  ],
+  "metadata": {
+    "notes": "Generic GPT-2 family adapter for local Safetensors checkpoints."
+  }
+}

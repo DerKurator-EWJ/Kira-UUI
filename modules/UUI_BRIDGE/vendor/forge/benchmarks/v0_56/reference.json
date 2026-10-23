@@ -1,0 +1,255 @@
+{
+  "base_canonical": {
+    "digest": "60370ee8ebc5de8987b861888c8f280a6dae0e7182bd4dc7589493283e3963fc",
+    "format": "equinox-canonical-id-space-v1",
+    "identity_count": 20,
+    "node_identity_count": 17,
+    "relation_identity_count": 3,
+    "run_id": 1,
+    "surface_binding_count": 17,
+    "triple_count": 16,
+    "version": "0.44"
+  },
+  "closure": {
+    "canonical_id_run_id": 2,
+    "digest": "2a8f2c27ae863ba6122d4c0e26c44e54d37c622092ef009df840e6b53576d211",
+    "direct_entry_count": 4,
+    "entry_count": 40,
+    "format": "equinox-structural-closure-v1",
+    "inherited_entry_count": 36,
+    "policy": {
+      "accessible_relation_types": [],
+      "include_hierarchy_relations": true,
+      "inheritance_relation_types": [
+        "is_a"
+      ],
+      "max_parent_depth": 8,
+      "min_confidence": 0.0,
+      "min_score": 0.0
+    },
+    "root_count": 4,
+    "run_id": 1,
+    "version": "0.45"
+  },
+  "concept_macro": {
+    "canonical_id_run_id": 2,
+    "digest": "7052aa1786ac00f0593ed557cdd10bec29cdd75e655cdf25cad9d59e4d88d44b",
+    "effective_relation_count": 27,
+    "format": "equinox-recursive-macro-collapse-v1",
+    "levels_built": 2,
+    "local_relation_count": 13,
+    "macro_count": 3,
+    "membership_count": 6,
+    "policy": {
+      "exclude_predicate_types": [],
+      "include_predicate_types": [],
+      "max_levels": 4,
+      "max_macros_per_level": 64,
+      "min_common_facts": 2,
+      "min_fact_quality": 0.0,
+      "min_members": 2,
+      "min_source_count": 1,
+      "require_positive_savings": true
+    },
+    "potential_reference_savings": 21,
+    "run_id": 1,
+    "structural_closure_run_id": 1,
+    "version": "0.46"
+  },
+  "controls": {
+    "concept_macros_present": true,
+    "direct_pack_matches_legacy_flattened_core": true,
+    "forge_db_removed_before_runtime": true,
+    "kernel_pack_is_loadable_after_forge_removal": true,
+    "no_intermediate_runtime_pack_persisted": true,
+    "relation_macros_present": true,
+    "runtime_queries_correct": true,
+    "single_runtime_artifact": true,
+    "teacher_removed_before_runtime": true
+  },
+  "direct_compile": {
+    "canonical_run_id": 2,
+    "concept_macro_run_id": 1,
+    "concept_shortcut_count": 24,
+    "digest": "058c6bad41535628ff60ec522ba613a578e1e6b10a3888b3c7435f4110e155f3",
+    "fact_count": 24,
+    "family_alias_route_count": 2,
+    "relation_facet_run_id": 1,
+    "relation_macro_route_count": 3,
+    "relation_macro_run_id": 1,
+    "route_count": 15,
+    "surface_count": 17
+  },
+  "flat_pack_bytes": 9050,
+  "forge_db_removed_before_runtime": true,
+  "format": "equinox-direct-teacher-flat-kernel-compiler-v1",
+  "legacy_oracle_core_parity": true,
+  "query_accuracy": 1.0,
+  "query_rows": [
+    {
+      "correct": true,
+      "relation": "property",
+      "status": "resolved",
+      "surface": "eule",
+      "value_count": 3
+    },
+    {
+      "correct": true,
+      "relation": "action",
+      "status": "resolved",
+      "surface": "eule",
+      "value_count": 3
+    },
+    {
+      "correct": true,
+      "relation": "is_a",
+      "status": "resolved",
+      "surface": "eule",
+      "value_count": 1
+    },
+    {
+      "correct": true,
+      "relation": "property",
+      "status": "resolved",
+      "surface": "falke",
+      "value_count": 3
+    },
+    {
+      "correct": true,
+      "relation": "action",
+      "status": "resolved",
+      "surface": "falke",
+      "value_count": 3
+    },
+    {
+      "correct": true,
+      "relation": "is_a",
+      "status": "resolved",
+      "surface": "falke",
+      "value_count": 1
+    },
+    {
+      "correct": true,
+      "relation": "property",
+      "status": "resolved",
+      "surface": "hund",
+      "value_count": 3
+    },
+    {
+      "correct": true,
+      "relation": "action",
+      "status": "resolved",
+      "surface": "hund",
+      "value_count": 3
+    },
+    {
+      "correct": true,
+      "relation": "is_a",
+      "status": "resolved",
+      "surface": "hund",
+      "value_count": 1
+    },
+    {
+      "correct": true,
+      "relation": "property",
+      "status": "resolved",
+      "surface": "wolf",
+      "value_count": 3
+    },
+    {
+      "correct": true,
+      "relation": "action",
+      "status": "resolved",
+      "surface": "wolf",
+      "value_count": 3
+    },
+    {
+      "correct": true,
+      "relation": "is_a",
+      "status": "resolved",
+      "surface": "wolf",
+      "value_count": 1
+    }
+  ],
+  "relation_facets": {
+    "derived_canonical_run_id": 2,
+    "derived_fact_triple_count": 16,
+    "digest": "0b943d9ee5e97f4bfbe86675c0ce1550e2d193fdeacf7d0d37931f86a4507f69",
+    "facet_count": 8,
+    "format": "equinox-canonical-relation-facets-v1",
+    "relation_hierarchy_triple_count": 8,
+    "run_id": 1,
+    "source_canonical_run_id": 1,
+    "source_triple_count": 16,
+    "version": "0.51"
+  },
+  "relation_macro": {
+    "digest": "5278ca00251d6e2db62fffab56c08df777445ec980b0ceb10a9c95e0b814b45c",
+    "effective_meta_fact_count": 5,
+    "format": "equinox-recursive-relation-macro-v1",
+    "levels_built": 2,
+    "local_meta_fact_count": 3,
+    "macro_count": 3,
+    "membership_count": 10,
+    "policy": {
+      "max_levels": 4,
+      "max_macros_per_level": 128,
+      "min_common_meta_facts": 1,
+      "min_members": 2,
+      "require_positive_savings": true
+    },
+    "potential_reference_savings": 4,
+    "predicate_ready_macro_count": 3,
+    "relation_facet_run_id": 1,
+    "run_id": 1,
+    "version": "0.52"
+  },
+  "runtime_artifact_count": 1,
+  "runtime_artifacts": [
+    "knowledge.eqkernel.json"
+  ],
+  "runtime_format_version": "0.55",
+  "structure": {
+    "attribute_edge_count": 8,
+    "backend_id": "v039-local-neural-domain-teacher",
+    "concept_count": 9,
+    "digest": "ee74e0efa99249ffac284d803e4ebbc899fb9c1f6da0d468a369bc7e04d40c27",
+    "format": "equinox-top-down-teacher-structure-v1",
+    "max_hierarchy_depth": 4,
+    "parent_edge_count": 8,
+    "root_count": 1,
+    "run_id": 1,
+    "seed_count": 4,
+    "source_id": "v056-neural-teacher",
+    "source_version": "1",
+    "teacher_queries": 16,
+    "top_down_order": [
+      "entität",
+      "lebewesen",
+      "tier",
+      "säugetier",
+      "vogel",
+      "eule",
+      "falke",
+      "hund",
+      "wolf"
+    ],
+    "version": "0.47"
+  },
+  "teacher": {
+    "architecture": "Embedding(28)-GRU(56)-Linear",
+    "backend_id": "v039-local-neural-domain-teacher",
+    "model_dir": "<removed-before-runtime>",
+    "parameters": 16318,
+    "seed": 5601,
+    "training_accuracy": 1.0,
+    "training_elapsed_ms": 19.994471998870722,
+    "training_epochs": 13,
+    "training_examples": 16,
+    "vocab_size": 22
+  },
+  "teacher_queries": 16,
+  "teacher_removed_before_runtime": true,
+  "teacher_state_bytes": 68831,
+  "version": "0.56"
+}

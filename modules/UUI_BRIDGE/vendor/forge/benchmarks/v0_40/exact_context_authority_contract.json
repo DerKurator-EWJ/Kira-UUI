@@ -1,0 +1,29 @@
+{
+  "anti_cheating_controls": [
+    "authority ordering may not inflate candidate scores",
+    "if no direct candidate clears the floor, ordinary aggregation must be preserved",
+    "heldout and opaque knowledge may not be created by authority ordering"
+  ],
+  "baseline": "v0.39 Real Teacher Domain Trial",
+  "format": "equinox-forge-v0.40-exact-context-authority-contract-v1",
+  "required_invariants": {
+    "heldout_fact_accuracy_max": 0.25,
+    "opaque_relation_abstention_min": 0.99,
+    "outside_domain_abstention_min": 0.99,
+    "paraphrase_accuracy_min": 0.999,
+    "replay_accuracy_min": 0.999
+  },
+  "treatment": {
+    "additional_teacher_queries": 0,
+    "authority_min_direct_score": 0.5,
+    "authority_scope": [
+      "exact",
+      "suffix"
+    ],
+    "composition_in_authority_tier": false,
+    "frames_in_authority_tier": false,
+    "recompile": false,
+    "runtime_change_only": true,
+    "same_eqbase": true
+  }
+}

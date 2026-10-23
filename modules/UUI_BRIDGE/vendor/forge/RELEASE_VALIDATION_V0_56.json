@@ -1,0 +1,57 @@
+{
+  "compileall": true,
+  "direct_teacher_flat_trial": {
+    "concept_shortcut_count": 24,
+    "controls": {
+      "concept_macros_present": true,
+      "direct_pack_matches_legacy_flattened_core": true,
+      "forge_db_removed_before_runtime": true,
+      "kernel_pack_is_loadable_after_forge_removal": true,
+      "no_intermediate_runtime_pack_persisted": true,
+      "relation_macros_present": true,
+      "runtime_queries_correct": true,
+      "single_runtime_artifact": true,
+      "teacher_removed_before_runtime": true
+    },
+    "fact_count": 24,
+    "family_alias_route_count": 2,
+    "legacy_oracle_core_parity": true,
+    "pack_digest": "058c6bad41535628ff60ec522ba613a578e1e6b10a3888b3c7435f4110e155f3",
+    "query_accuracy": 1.0,
+    "relation_macro_route_count": 3,
+    "route_count": 15,
+    "runtime_artifact_count": 1,
+    "runtime_artifacts": [
+      "knowledge.eqkernel.json"
+    ],
+    "surface_count": 17,
+    "teacher_queries": 16
+  },
+  "external_pretrained_hf_claim": false,
+  "format": "equinox-forge-release-validation-v1",
+  "runtime_format": {
+    "changed": false,
+    "version": "0.55"
+  },
+  "runtime_hashes_unchanged": {
+    "macro_numeric_runtime.py": "76f7aa3d9df1d124f4028e20a447da9f2e83d6cbf3b3cc0d9f1c99df0de33061",
+    "numeric_runtime.py": "cbe355ef447ef111a6ab6aa34f838da12f6105905d64765e3fd9a415a72dcf47",
+    "relation_macro_runtime.py": "52c4fd05dbc79921410e49b539e238d4bd51d90127979990ca98ff16334dedb9",
+    "runtime_cognition.py": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+    "unified_numeric_kernel.py": "41912dabfdcd085bc1ea4b6537a82851994a85b7e171918291c9cefd0accbade",
+    "unified_relation_runtime.py": "5698cbf1a8007ea48b023aeea8d273fa73d5d388d23107e9e06e582b809be672"
+  },
+  "scope_note": "v0.56 changes the compiler path, not runtime semantics. Forge stages compile directly to the flat v0.55 kernel format; historical nested runtime packs remain regression oracles only.",
+  "tests": {
+    "failed": 0,
+    "passed": 60,
+    "total": 60
+  },
+  "version": "0.56.0",
+  "wheel": {
+    "direct_compiler_entrypoint": true,
+    "installed": true,
+    "path": "dist/equinox_forge-0.56.0-py3-none-any.whl",
+    "sha256": "766f5075d66ee4417e073ad9833d59fcd37d918e68507d960bacad232d93baba"
+  }
+}

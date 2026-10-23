@@ -1,0 +1,63 @@
+{
+  "controls": {
+    "canonical_base_unchanged": true,
+    "effective_child_signature_survives_compaction": true,
+    "higher_macro_exists": true,
+    "higher_macro_is_numeric_relation_subject": true,
+    "higher_macro_members_are_macros": true,
+    "macro_ids_are_numeric": true,
+    "positive_reference_savings": true,
+    "recursive_residual_compaction_happened": true,
+    "two_specific_level1_macros": true
+  },
+  "format": "equinox-forge-recursive-macro-reference-v1",
+  "levels": [
+    {
+      "effective_fact_count": 6,
+      "level": 1,
+      "local_fact_count": 3,
+      "macro_id": 790056453364774401,
+      "member_count": 2
+    },
+    {
+      "effective_fact_count": 6,
+      "level": 1,
+      "local_fact_count": 3,
+      "macro_id": 919706637320963349,
+      "member_count": 2
+    },
+    {
+      "effective_fact_count": 3,
+      "level": 2,
+      "local_fact_count": 3,
+      "macro_id": 4269851526146487484,
+      "member_count": 2
+    }
+  ],
+  "macro_build": {
+    "canonical_id_run_id": 1,
+    "digest": "92d0abce862925ff3abffb31aa19c2d3a139895e70d577c42690bc7f4fa4efed",
+    "effective_relation_count": 15,
+    "format": "equinox-recursive-macro-collapse-v1",
+    "levels_built": 2,
+    "local_relation_count": 9,
+    "macro_count": 3,
+    "membership_count": 6,
+    "policy": {
+      "exclude_predicate_types": [],
+      "include_predicate_types": [],
+      "max_levels": 4,
+      "max_macros_per_level": 64,
+      "min_common_facts": 2,
+      "min_fact_quality": 0.0,
+      "min_members": 2,
+      "min_source_count": 1,
+      "require_positive_savings": true
+    },
+    "potential_reference_savings": 9,
+    "run_id": 1,
+    "structural_closure_run_id": 1,
+    "version": "0.46"
+  },
+  "version": "0.46"
+}

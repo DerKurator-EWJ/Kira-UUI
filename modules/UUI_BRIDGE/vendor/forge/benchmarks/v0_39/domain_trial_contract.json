@@ -1,0 +1,39 @@
+{
+  "format": "equinox-forge-v0.39-domain-trial-contract-v1",
+  "teacher": {
+    "kind": "locally-trained-neural-next-token-model",
+    "architecture": "Embedding(28)-GRU(56)-Linear",
+    "seed": 3901,
+    "external_pretrained_model": false
+  },
+  "domain": {
+    "entities": 32,
+    "core_relation_families": ["class", "habitat", "ability", "trait"],
+    "opaque_relation_family": "food",
+    "outside_domain_controls": 8
+  },
+  "extraction": {
+    "compiled_core_facts_per_entity": 2,
+    "heldout_core_facts_per_entity": 2,
+    "opaque_relation_facts_compiled": 0,
+    "prompt_variant_compiled": "base-only",
+    "teacher_top_k": 4
+  },
+  "evaluation_categories": {
+    "replay": "same prompts that were probed into Equinox",
+    "paraphrase": "article-prefixed variants not probed into Equinox",
+    "heldout_fact": "teacher-known animal facts never directly probed into Equinox",
+    "opaque_relation": "entire teacher-known relation family never probed into Equinox",
+    "outside_domain_control": "teacher-known object facts outside compiled animal domain"
+  },
+  "required_invariants": {
+    "teacher_training_accuracy_min": 0.995,
+    "direct_replay_top1_retention_min": 0.999,
+    "outside_domain_abstention_min": 0.99
+  },
+  "claims_excluded": [
+    "general-world LLM distillation",
+    "external pretrained model retention",
+    "mobile energy efficiency"
+  ]
+}

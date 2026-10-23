@@ -1,0 +1,42 @@
+{
+  "version": "0.34",
+  "mechanism": "evidence_backed_relation_composition",
+  "frozen_l5_prompt": "Hund wohnt in",
+  "expected": "Haus",
+  "direct_predictive_exposure": false,
+  "required_components": {
+    "stable_composition_schema": true,
+    "complete_compiled_semantic_path": true
+  },
+  "schema": {
+    "pattern_tokens": ["[SLOT_0]", "wohnt", "in"],
+    "path": [
+      {"relation_type": "is_a", "direction": "out"},
+      {"relation_type": "property", "direction": "out"}
+    ],
+    "status": "stable",
+    "min_path_quality": 0.5
+  },
+  "controls": {
+    "opaque_family_expected": null,
+    "graph_only_expected": null,
+    "schema_only_expected": null,
+    "runtime_ablation_expected": null,
+    "incomplete_path_entity_prompt": "Stein wohnt in",
+    "incomplete_path_expected": null,
+    "unmatched_phrase_prompt": "Hund wohnt aus",
+    "unmatched_phrase_expected": null
+  },
+  "preserve": {
+    "L0": 1.0,
+    "L1": 1.0,
+    "L2": 1.0,
+    "L3": 1.0,
+    "L4": 1.0
+  },
+  "non_claims": [
+    "The relation is not inferred from nothing; its composition semantics are compiled explicitly.",
+    "The v0.34 schema is fixture-authored, not automatically induced.",
+    "L5 means held out from direct predictive training, not absent from all representations in the BASE."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "benchmark_reference": {
+    "final_budget": 64,
+    "fixed_full_accuracy": 0.5703125,
+    "fixed_holdout_transfer_improvement_observed": false,
+    "fixed_shadow_holdout_accuracy": 0.15625,
+    "iterative_equals_one_shot_final_selection": true,
+    "iterative_full_accuracy": 0.6171875,
+    "iterative_shadow_holdout_accuracy": 0.15625,
+    "one_shot_full_accuracy": 0.6171875,
+    "random_full_accuracy_mean": 0.5734375,
+    "random_shadow_holdout_accuracy_mean": 0.15625
+  },
+  "compileall": true,
+  "fresh_target_install": true,
+  "installed_smoke_trial": true,
+  "methodological_finding": "v0.41 strategy-specific unqueried accuracy is confounded by different remainder sets; v0.42 fixed shadow holdout shows no transfer improvement from current uncertainty proxy",
+  "regression_execution": "segmented; all test_*.py files executed, including three slow tiny-model tests",
+  "regression_passed": 46,
+  "regression_test_files": 46,
+  "release": "0.42.0",
+  "runtime_byte_identical_to_v0_41": true,
+  "runtime_cognition_sha256": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+  "runtime_cognition_version": "0.40",
+  "wheel_build": true,
+  "wheel_file": "equinox_forge-0.42.0-py3-none-any.whl",
+  "wheel_sha256": "e45905d388274c255703595f39f924e4872760ca048c3031975dec748affe522"
+}

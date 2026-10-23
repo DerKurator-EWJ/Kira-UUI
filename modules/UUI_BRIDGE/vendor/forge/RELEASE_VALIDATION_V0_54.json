@@ -1,0 +1,40 @@
+{
+  "compileall": true,
+  "format": "equinox-forge-release-validation-v1",
+  "installed_unified_relation_runtime_trial": {
+    "version": "0.54",
+    "pack_digest": "43dc36e0e602e985a03542bf335082a10dfa737de455da9ad69a3b3376a08e56",
+    "route_count": 15,
+    "family_alias_route_count": 2,
+    "direct_macro_route_count": 3,
+    "scalar_route_count": 10,
+    "property_family_query_is_compiled_macro_alias": true,
+    "action_family_query_is_compiled_macro_alias": true,
+    "property_semantics_match_legacy_family_view": true,
+    "action_semantics_match_legacy_family_view": true,
+    "root_macro_still_resolves_union": true,
+    "ordinary_scalar_relation_uses_same_unified_api": true,
+    "runtime_does_not_depend_on_legacy_family_api": true,
+    "runtime_route_table_contains_no_symbolic_relation_names": true
+  },
+  "runtime_hashes_unchanged_from_v0_53": {
+    "runtime_cognition.py": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+    "numeric_runtime.py": "cbe355ef447ef111a6ab6aa34f838da12f6105905d64765e3fd9a415a72dcf47",
+    "macro_numeric_runtime.py": "76f7aa3d9df1d124f4028e20a447da9f2e83d6cbf3b3cc0d9f1c99df0de33061",
+    "canonical_relation_facets.py": "056926cbf3a014ac116960abcb02e6065afca471af680733c35355574d4377ba",
+    "recursive_relation_collapse.py": "3386ae91cb7880782f58cd840bfa163ed936eefc768cd2bb27ebd0853ad596cc",
+    "relation_macro_runtime.py": "52c4fd05dbc79921410e49b539e238d4bd51d90127979990ca98ff16334dedb9"
+  },
+  "scope_note": "v0.54 replaces runtime-side semantic family dispatch in the new numeric path with a compiled numeric relation-route table. Legacy family APIs remain available for compatibility and regression comparison, but the unified runtime does not call them. This release changes routing architecture, not truth authority or inference semantics.",
+  "tests": {
+    "failed": 0,
+    "passed": 58,
+    "total": 58
+  },
+  "version": "0.54.0",
+  "wheel": {
+    "installed": true,
+    "path": "dist/equinox_forge-0.54.0-py3-none-any.whl",
+    "sha256": "249ef318b511b5038c227d2a2822c0c9bd9337171ce13c69feeaaadf3be7ac92"
+  }
+}

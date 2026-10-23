@@ -1,0 +1,84 @@
+{
+  "categories": {
+    "heldout_fact": {
+      "average_recall_nodes": 20.5,
+      "average_relation_checks": 124.5,
+      "cases": 64,
+      "runtime_abstention_rate": 0.5,
+      "runtime_accuracy": 0.140625,
+      "runtime_teacher_top1_retention": 0.140625,
+      "teacher_accuracy": 1.0
+    },
+    "opaque_relation": {
+      "average_recall_nodes": 3.0,
+      "average_relation_checks": 11.0,
+      "cases": 32,
+      "runtime_abstention_rate": 1.0,
+      "runtime_accuracy": 0.0,
+      "runtime_teacher_top1_retention": 0.0,
+      "teacher_accuracy": 1.0
+    },
+    "outside_domain_control": {
+      "average_recall_nodes": 18.0,
+      "average_relation_checks": 82.0,
+      "cases": 8,
+      "runtime_abstention_rate": 1.0,
+      "runtime_accuracy": 0.0,
+      "runtime_teacher_top1_retention": 0.0,
+      "teacher_accuracy": 1.0
+    },
+    "paraphrase": {
+      "average_recall_nodes": 19.5,
+      "average_relation_checks": 121.5,
+      "cases": 64,
+      "runtime_abstention_rate": 0.0,
+      "runtime_accuracy": 0.921875,
+      "runtime_teacher_top1_retention": 0.921875,
+      "teacher_accuracy": 1.0
+    },
+    "replay": {
+      "average_recall_nodes": 19.5,
+      "average_relation_checks": 121.5,
+      "cases": 64,
+      "runtime_abstention_rate": 0.0,
+      "runtime_accuracy": 0.921875,
+      "runtime_teacher_top1_retention": 0.921875,
+      "teacher_accuracy": 1.0
+    }
+  },
+  "compiled_probe_facts": 64,
+  "direct_replay_top1_retention": 1.0,
+  "domain_entities": 32,
+  "failure_trace": {
+    "expected": "savanne",
+    "land_score_approx": 0.9392020641,
+    "prompt": "löwe lebt im",
+    "runtime_top1": "land",
+    "savanne_direct_score_approx": 0.8803648153,
+    "savanne_score_approx": 0.9194408142
+  },
+  "format": "equinox-forge-v0.39-domain-trial-reference-v1",
+  "observed_failure_modes": [
+    "full runtime associative recall can overrule an exact-context teacher prediction for minority targets",
+    "heldout teacher-known facts without extracted semantic support are mostly not recoverable",
+    "an entirely unprobed relation family is correctly unavailable rather than invented"
+  ],
+  "opaque_relation_facts": 32,
+  "outside_domain_abstention_rate": 1.0,
+  "pack_bytes": 12738,
+  "pack_nodes": 166,
+  "pack_relations": 256,
+  "pack_to_teacher_state_ratio": 0.13674571394832047,
+  "teacher": {
+    "parameters": 22183,
+    "training_accuracy": 1.0,
+    "training_epochs": 30,
+    "training_examples": 336,
+    "vocab_size": 91
+  },
+  "teacher_queries_for_compilation": 64,
+  "teacher_query_fraction_of_animal_fact_space": 0.4,
+  "teacher_state_bytes": 93151,
+  "uncompiled_core_facts": 64,
+  "version": "0.39"
+}

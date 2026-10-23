@@ -1,0 +1,16 @@
+{
+  "format": "equinox-forge-specific-general-numeric-runtime-contract-v1",
+  "version": "0.48",
+  "requirements": {
+    "runtime_must_execute_after_forge_db_is_closed": true,
+    "runtime_core_relations_must_be_numeric": true,
+    "resolution_must_start_at_the_specific_subject": true,
+    "nearest_qualifying_specificity_level_must_own_the_answer": true,
+    "stronger_general_evidence_must_not_outvote_a_valid_local_override": true,
+    "subthreshold_local_evidence_may_fall_back_to_parent": true,
+    "same_depth_unresolved_conflicts_must_abstain": true,
+    "parent_cycles_must_terminate": true,
+    "surface_labels_must_remain_an_io_binding_layer": true,
+    "canonical_semantic_triples_must_not_be_duplicated_by_runtime_export": true
+  }
+}
