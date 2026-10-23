@@ -1,0 +1,16 @@
+# UUI 0.2: functions, branches, loops and Kira observations
+fn square(x) {
+    return x * x
+}
+let n = 1
+let total = 0
+while n <= 4 {
+    set total = total + square(n)
+    set n = n + 1
+}
+if total == 30 {
+    print "UUI 0.2 OK"
+    observe total as "uui_control_flow_demo"
+} else {
+    print "Unexpected result"
+}

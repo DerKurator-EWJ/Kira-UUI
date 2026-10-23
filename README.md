@@ -17,3 +17,4 @@ gesondert auf persoenliche Angaben und Rechte geprueft werden.
 | Git-Tag | Originalarchiv | Bereich |
 |---|---|---|
 | `uui-core-v0.1` | `UUI_CORE_0_1.zip` | `modules/UUI_CORE/` |
+| `uui-core-v0.2` | `UUI_CORE_0_2.zip` | `modules/UUI_CORE/` |

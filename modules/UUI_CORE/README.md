@@ -1,31 +1,45 @@
-# UUI Core 0.1 — erster ausführbarer Sprachprototyp
+# UUI Core 0.2 — Experimental interpreter
 
-Dies ist eine **eigene minimale Syntax mit Lexer, Parser und Interpreter**, implementiert in Python. **Keine** plattformneutrale VM, kein Bytecode und keine eigenständige native Programmiersprache im Sinne einer von Python unabhängigen Runtime.
+UUI 0.2 adds `fn`/`return`, `if`/`else`, bounded `while`, `set`, booleans, comparisons and boolean operators to UUI 0.1. Existing `let`, `print`, `observe`, `resolve` and exact rational arithmetic remain.
 
-## Ausführen
+## Requirements
 
-Python 3.10+ (Standardbibliothek; zusätzliche vendorte Abhängigkeiten können für Forge-Pakete erforderlich sein):
+Python 3.10+ (designed to use the standard library only; tested in the build environment with Python 3.13.5, **not** directly tested with Python 3.14.7). No pip dependencies required for the included demo.
 
-```bash
-cd UUI_CORE_0_1
-python run_uui.py hello.uui
-python -m unittest -v test_uui.py test_bridge.py
+## Windows / PowerShell
+
+Unzip the archive and open PowerShell in the `UUI_CORE_0_2` folder:
+
+```powershell
+py -3.14 run_uui.py control_flow.uui
+py -3.14 -m unittest discover -v
 ```
 
-Optional: `--database kira.sqlite` für persistente numerische Beobachtungen; `--forge-pack PATH` für ein kompatibles Forge-Kernel-Paket.
+If the Python launcher isn't installed, use `python` instead of `py -3.14`.
 
-## UUI 0.1
+Expected demo output:
 
-- `let name = expression` — Variable
-- `print expression` — Ausgabe
-- `observe expression as "source"` — rationalen Wert im Kira Numeric Core erfassen
-- `resolve expression, expression` — Forge-Abfrage, nur mit geladenem Pack
-- Exakte rationale Arithmetik `+ - * /`, Klammern, Dezimalzahlen, Strings, Kommentare `#`.
-- Eine Anweisung pro Zeile oder mit `;` getrennt.
-- Keine Schleifen, Bedingungen, Funktionen, Datei-/Netzwerkzugriffe oder dynamische Host-Ausführung.
+```
+UUI 0.2 OK
+{"id": "kira.numeric:1", "rational": ["30", "1"]}
+```
 
-## Grenzen
+Use `--database path/to/kira.sqlite` to persist numeric observations (the default is in-memory). `--forge-pack` optionally supplies an existing Forge kernel pack; full Forge pack compatibility is not validated by this demo.
 
-Interpreter, Bridge und Vendor-Code benötigen weiterhin Python. Keine UUIX-Datei, keine JVM-/Android-Portierung. Der Forge-Pfad ist nur ein Adapter und nicht durch einen echten End-to-End-Pack-Test validiert. Die Sprachumgebung ist **keine Sicherheits-Sandbox für feindlichen Code** (große Zahlen können Ressourcen verbrauchen); keine Ausführung unzuverlässiger Programme anbieten. Die Begrenzung von Token/Anweisungen ist nur eine erste Schutzmaßnahme.
+## Scope and limitations
 
-Die bisherigen Bridge- und Vendor-Dateien bleiben erhalten, damit sich die Weiterentwicklung gegen die ursprünglichen Kira-/Forge-Module prüfen lässt.
+- This is a custom *interpreted syntax* implemented in Python, **not** native or platform-neutral UUI bytecode (`.uuix`).
+- `while` loops, expressions and recursion have configurable runtime budgets. These are basic runaway-execution safeguards, **not** a hardened sandbox against hostile code or denial of service.
+- Functions use local parameters and local variables, no closures or global access. A function without `return` yields an internal `None` value; operations on it are unsupported.
+- `if` and `while` blocks share the current variable environment. `let` declares, `set` changes existing values.
+- Host imports, arbitrary filesystem operations, and dynamic Python evaluation are not exposed through UUI syntax.
+- Bundled Kira/Forge code is retained as Python vendor modules; no automatic port to a native runtime has occurred.
+
+## Files
+
+- `uui_lang.py` — lexer, parser, interpreter
+- `run_uui.py` — CLI
+- `hello.uui` — 0.1 compatibility demo
+- `control_flow.uui` — 0.2 demo
+- `test_uui.py`, `test_uui_02.py`, `test_bridge.py` — tests
+- `uui_bridge.py`, `vendor/` — existing integration components
