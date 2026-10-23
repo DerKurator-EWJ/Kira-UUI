@@ -1,0 +1,14 @@
+{
+  "format": "equinox-forge-canonical-id-space-contract-v1",
+  "version": "0.44",
+  "runtime_cognition_changed": false,
+  "requirements": {
+    "stable_numeric_ids_across_insertion_order": true,
+    "numeric_subject_predicate_object_triples": true,
+    "surface_labels_separate_from_concept_identity": true,
+    "multiple_surfaces_may_bind_one_concept": true,
+    "numeric_closure_without_surface_lookup": true,
+    "no_automatic_cross_language_merge_without_explicit_binding": true,
+    "no_recursive_macro_collapse_yet": true
+  }
+}

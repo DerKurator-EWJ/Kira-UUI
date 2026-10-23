@@ -1,0 +1,76 @@
+{
+  "chains": {
+    "eule": [
+      "entität",
+      "lebewesen",
+      "tier",
+      "vogel",
+      "eule"
+    ],
+    "falke": [
+      "entität",
+      "lebewesen",
+      "tier",
+      "vogel",
+      "falke"
+    ],
+    "hund": [
+      "entität",
+      "lebewesen",
+      "tier",
+      "säugetier",
+      "hund"
+    ],
+    "wolf": [
+      "entität",
+      "lebewesen",
+      "tier",
+      "säugetier",
+      "wolf"
+    ]
+  },
+  "closure": {
+    "entry_count": 40,
+    "root_count": 4
+  },
+  "controls": {
+    "canonical_graph_is_numeric": true,
+    "closure_materialized_for_all_seeds": true,
+    "concrete_ontology_absent_from_extractor_policy": true,
+    "extractor_matches_teacher_parent_structure": true,
+    "leaf_chains_match_fixture": true,
+    "recursive_macro_collapse_reuses_extracted_structure": true,
+    "single_expected_root": true,
+    "source_manifest_persisted": true,
+    "teacher_is_neural": true,
+    "top_down_order_is_root_first": true
+  },
+  "format": "equinox-forge-top-down-teacher-reference-v1",
+  "macro": {
+    "levels_built": 2,
+    "macro_count": 3,
+    "membership_count": 6,
+    "potential_reference_savings": 21
+  },
+  "teacher_structure": {
+    "attribute_edge_count": 8,
+    "concept_count": 9,
+    "max_hierarchy_depth": 4,
+    "parent_edge_count": 8,
+    "root_count": 1,
+    "seed_count": 4,
+    "teacher_queries": 16
+  },
+  "top_down_order": [
+    "entität",
+    "lebewesen",
+    "tier",
+    "säugetier",
+    "vogel",
+    "eule",
+    "falke",
+    "hund",
+    "wolf"
+  ],
+  "version": "0.47"
+}

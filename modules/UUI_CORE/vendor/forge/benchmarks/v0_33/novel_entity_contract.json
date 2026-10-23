@@ -1,0 +1,29 @@
+{
+  "version": "0.33",
+  "mechanism": "evidence_backed_novel_entity_admission",
+  "predictive_train_excludes": ["Wolf", "Stein"],
+  "positive_case": {
+    "prompt": "Wolf ist ein",
+    "expected": "Tier",
+    "required_independent_semantics": true
+  },
+  "negative_case": {
+    "prompt": "Stein ist ein",
+    "expected": null,
+    "surface_present_in_base": true
+  },
+  "surface_only_control": {
+    "prompt": "Wolf ist ein",
+    "expected": null
+  },
+  "semantic_relation_types": ["semantic_similarity", "contextual_similarity"],
+  "min_semantic_quality": 0.65,
+  "preserve": {
+    "L0": 1.0,
+    "L1": 1.0,
+    "L2": 1.0,
+    "L3": 1.0,
+    "L5": 0.0,
+    "unsupported_known_mix_rejection": true
+  }
+}

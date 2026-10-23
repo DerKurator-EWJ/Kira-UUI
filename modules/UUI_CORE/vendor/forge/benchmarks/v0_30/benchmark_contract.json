@@ -1,0 +1,59 @@
+{
+  "format": "equinox-forge-benchmark-contract-v1",
+  "version": "0.30",
+  "frozen": true,
+  "policy": {
+    "existing_metric_semantics_may_change": false,
+    "new_cases_may_be_appended": true,
+    "new_metrics_may_be_appended": true,
+    "results_must_record_runtime_policy": true,
+    "results_must_record_pack_hash": true,
+    "results_must_record_dataset_hash": true
+  },
+  "metric_groups": {
+    "behaviour_retention": [
+      "top1_retention",
+      "teacher_topk_recall",
+      "teacher_probability_mass_retained",
+      "ndcg_at_k",
+      "conditional_js_divergence"
+    ],
+    "generalization": [
+      "heldout_top1_retention",
+      "highest_generalization_ladder_level_with_success",
+      "structural_contract_pass_rate"
+    ],
+    "rejection": [
+      "false_positive_rate",
+      "unknown_rejection_rate"
+    ],
+    "rule_resolution": [
+      "specificity_accuracy",
+      "exception_accuracy",
+      "consensus_state_accuracy"
+    ],
+    "runtime_cost": [
+      "mean_recall_nodes",
+      "mean_relation_checks",
+      "runtime_latency_ms",
+      "runtime_index_build_ms"
+    ],
+    "artifact_cost": [
+      "eqbase_bytes",
+      "compiled_nodes",
+      "compiled_relations",
+      "compile_time_ms",
+      "peak_compile_ram_bytes",
+      "retained_function_per_megabyte"
+    ]
+  },
+  "required_evaluation_families": [
+    "exact_replay_control",
+    "heldout_surface_transfer",
+    "compositional_hierarchical_transfer",
+    "unknown_rejection",
+    "specificity_and_exception",
+    "consensus_and_conflict",
+    "runtime_routing_cost"
+  ]
+}

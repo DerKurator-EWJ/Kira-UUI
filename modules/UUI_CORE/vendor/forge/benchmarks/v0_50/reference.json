@@ -1,0 +1,35 @@
+{
+  "canonical_triple_count": 16,
+  "expected_teacher_structural_facts": 16,
+  "format": "equinox-v050-teacher-numeric-compiler-reference-v1",
+  "hf_static_probe": {
+    "available": true,
+    "model_type": "deepseek_v3",
+    "runtime_execution_attempted": false
+  },
+  "known_limitations": {
+    "coarse_predicates_block_safe_macro_shortcuts": true,
+    "external_pretrained_hf_runtime_not_validated_here": true,
+    "full_relational_storage_is_preserved_despite_scalar_query_limit": true,
+    "generic_property_action_are_scalar_queries": true
+  },
+  "macro_count": 3,
+  "macro_levels": 2,
+  "relation_value_counts": {
+    "action": 4,
+    "is_a": 5,
+    "property": 4
+  },
+  "scalar_runtime_query_accuracy": 1.0,
+  "stored_teacher_fact_retention": 1.0,
+  "teacher_queries": 16,
+  "version": "0.50",
+  "work": {
+    "baseline_nodes_touched": 20,
+    "macro_nodes_touched": 20,
+    "macro_routed_queries": 0,
+    "macro_shortcut_count": 0,
+    "node_reduction_fraction": 0.0,
+    "query_count": 12
+  }
+}

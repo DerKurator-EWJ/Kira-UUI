@@ -1,0 +1,34 @@
+{
+  "claims_excluded": [
+    "external pretrained Hugging Face runtime validated",
+    "general-world-model equivalence",
+    "multi-valued closure enumeration through scalar runtime API"
+  ],
+  "format": "equinox-v050-teacher-numeric-compiler-contract-v1",
+  "purpose": "Freeze the first end-to-end teacher→numeric-ID→closure→macro→DB-free runtime compiler trial.",
+  "required_controls": [
+    "all_teacher_structural_facts_survive_numeric_pack",
+    "canonical_identity_is_numeric",
+    "forge_db_closed_before_runtime",
+    "macro_runtime_preserves_baseline_when_shortcut_is_unsafe",
+    "recursive_macro_collapse_present",
+    "runtime_pack_is_smaller_than_teacher_state_in_this_fixture",
+    "scalar_specific_to_general_queries_correct",
+    "teacher_disabled_before_runtime",
+    "teacher_is_computed_neural_model",
+    "unsafe_ambiguous_macro_shortcuts_not_emitted"
+  ],
+  "required_measurements": [
+    "stored_teacher_fact_retention",
+    "scalar_runtime_query_accuracy",
+    "teacher_queries",
+    "canonical_triple_count",
+    "macro.levels_built",
+    "macro.macro_count",
+    "work.macro_shortcut_count",
+    "work.node_reduction_fraction",
+    "known_limitations.generic_property_action_are_scalar_queries",
+    "known_limitations.coarse_predicates_block_safe_macro_shortcuts"
+  ],
+  "version": "0.50"
+}

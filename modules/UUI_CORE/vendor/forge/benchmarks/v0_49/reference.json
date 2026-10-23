@@ -1,0 +1,27 @@
+{
+  "canonical_triple_count": 17,
+  "controls": {
+    "answer_parity_with_v048": true,
+    "canonical_graph_not_rewritten": true,
+    "expected_answers_preserved": true,
+    "local_specificity_not_bypassed": true,
+    "macros_used_for_routing": true,
+    "material_work_reduction": true,
+    "positive_work_reduction": true,
+    "resolution_metadata_parity_with_v048": true,
+    "runtime_pack_is_db_independent": true
+  },
+  "format": "equinox-forge-macro-aware-numeric-runtime-reference-v1",
+  "macro_count": 3,
+  "macro_levels": 2,
+  "pack_digest": "d21c415f20e3b6389acbda9ef0061352ce109d89fef48c4b9c80e9dc224b53d5",
+  "shortcut_count": 24,
+  "version": "0.49",
+  "work": {
+    "baseline_nodes_touched": 38,
+    "macro_nodes_touched": 23,
+    "macro_routed_queries": 11,
+    "node_reduction_fraction": 0.39473684210526316,
+    "query_count": 12
+  }
+}

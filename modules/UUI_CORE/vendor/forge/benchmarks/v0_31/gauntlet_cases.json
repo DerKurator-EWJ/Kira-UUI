@@ -1,0 +1,173 @@
+{
+  "ambiguity": {
+    "expected_clusters": 2,
+    "expected_contexts": 6,
+    "target": "Bank"
+  },
+  "exception_consensus": {
+    "expected_lifecycle": [
+      "candidate",
+      "stable",
+      "contested",
+      "quarantined",
+      "candidate",
+      "stable"
+    ],
+    "quarantine_conflicts": 2,
+    "stable_consensus": 0.75,
+    "stable_min_runs": 2,
+    "stable_min_sources": 2
+  },
+  "generalization": {
+    "abstention": [
+      [
+        "Stein singt",
+        "all_unknown"
+      ],
+      [
+        "Quasar verdampft",
+        "all_unknown"
+      ],
+      [
+        "Hund Baum",
+        "known_lexicon_unsupported"
+      ],
+      [
+        "Katze fliegt",
+        "known_lexicon_unsupported"
+      ],
+      [
+        "Haus kann",
+        "known_lexicon_unsupported"
+      ],
+      [
+        "Maus kann",
+        "known_lexicon_unsupported"
+      ],
+      [
+        "Stein ist ein",
+        "mixed_unknown_known_frame"
+      ],
+      [
+        "Hund wohnt in",
+        "heldout_relation_family"
+      ]
+    ],
+    "eval": [
+      [
+        "Hund kann",
+        0,
+        "ability",
+        "exact replay control"
+      ],
+      [
+        "Mein Hund kann",
+        1,
+        "ability",
+        "new prefix, known predictive suffix"
+      ],
+      [
+        "Hund jagt Maus",
+        2,
+        "hunting",
+        "known words + known local relation in new composition"
+      ],
+      [
+        "Maus sieht Hund",
+        3,
+        "perception-reversed",
+        "known lexicon, unseen local order"
+      ],
+      [
+        "Wolf ist ein",
+        4,
+        "taxonomy",
+        "novel entity in a known relational frame"
+      ],
+      [
+        "Hund wohnt in",
+        5,
+        "residence-preposition",
+        "entire relation family held out"
+      ]
+    ],
+    "train": [
+      [
+        "Hund ist ein",
+        "taxonomy"
+      ],
+      [
+        "Katze ist ein",
+        "taxonomy"
+      ],
+      [
+        "Hund kann",
+        "ability"
+      ],
+      [
+        "Katze kann",
+        "ability"
+      ],
+      [
+        "Katze jagt Maus",
+        "hunting"
+      ],
+      [
+        "Hund sieht Katze",
+        "perception"
+      ],
+      [
+        "Haus ist",
+        "property"
+      ],
+      [
+        "Vogel fliegt",
+        "flight"
+      ],
+      [
+        "Katze wohnt",
+        "residence-bare"
+      ],
+      [
+        "Vogel fliegt in",
+        "motion-preposition"
+      ]
+    ]
+  },
+  "runtime_routing": {
+    "macro": [
+      "a",
+      "b",
+      "c"
+    ],
+    "parents": 80
+  },
+  "typed_frame": {
+    "eval": [
+      [
+        "Wolf ist ein",
+        true,
+        "semantically admitted novel filler"
+      ],
+      [
+        "Fuchs ist ein",
+        true,
+        "second admitted novel filler"
+      ],
+      [
+        "Mein Wolf ist ein",
+        true,
+        "prefix transfer through typed frame"
+      ],
+      [
+        "Stein ist ein",
+        false,
+        "structural match but semantically inadmissible filler"
+      ]
+    ],
+    "train": [
+      "Hund ist ein",
+      "Katze ist ein"
+    ]
+  }
+}

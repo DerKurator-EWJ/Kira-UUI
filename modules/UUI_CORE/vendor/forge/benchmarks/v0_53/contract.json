@@ -1,0 +1,13 @@
+{
+  "format": "equinox-v053-relation-macro-runtime-contract-v1",
+  "version": "0.53",
+  "frozen": true,
+  "requirements": {
+    "property_macro_matches_family_semantics": true,
+    "action_macro_matches_family_semantics": true,
+    "root_macro_is_union_of_children": true,
+    "candidate_space_reduced_vs_unindexed_scan": true,
+    "must_not_claim_speedup_vs_specialized_family_index_unless_measured": true,
+    "relation_macro_adds_no_new_semantic_authority": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "compileall": true,
+  "format": "equinox-forge-release-validation-v1",
+  "installed_unified_numeric_kernel_trial": {
+    "all_v054_query_pairs_semantically_identical": true,
+    "execution_kernel_has_no_nested_runtime_object": true,
+    "failure_count": 0,
+    "flat_pack_contains_no_embedded_runtime_pack": true,
+    "flat_pack_is_smaller_than_nested_v054_pack": true,
+    "flat_v055_json_bytes": 7559,
+    "fraction_of_nested": 0.6723294494352041,
+    "nested_v054_json_bytes": 11243,
+    "pack_digest": "33a5452bf5c629357b9336dd5fb73deef32c099fd0361e9733d5f07c4859442e",
+    "query_pairs_compared": 240,
+    "resolved_query_pairs": 97,
+    "single_resolve_api_handles_all_compiled_routes": true,
+    "version": "0.55"
+  },
+  "runtime_hashes_unchanged_from_v0_54": {
+    "macro_numeric_runtime.py": "76f7aa3d9df1d124f4028e20a447da9f2e83d6cbf3b3cc0d9f1c99df0de33061",
+    "numeric_runtime.py": "cbe355ef447ef111a6ab6aa34f838da12f6105905d64765e3fd9a415a72dcf47",
+    "relation_macro_runtime.py": "52c4fd05dbc79921410e49b539e238d4bd51d90127979990ca98ff16334dedb9",
+    "runtime_cognition.py": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+    "unified_relation_runtime.py": "5698cbf1a8007ea48b023aeea8d273fa73d5d388d23107e9e06e582b809be672"
+  },
+  "runtime_import_isolation": {
+    "historical_runtime_modules_required": false,
+    "modules_excluded": [
+      "numeric_runtime",
+      "macro_numeric_runtime",
+      "canonical_relation_facets",
+      "relation_macro_runtime",
+      "unified_relation_runtime"
+    ]
+  },
+  "scope_note": "v0.55 consolidates the deployed numeric runtime into one flat pack and one execution kernel. Historical runtime layers remain Forge-side for audit/regression only; no new inference or truth-authority mechanism is introduced.",
+  "tests": {
+    "failed": 0,
+    "passed": 59,
+    "total": 59
+  },
+  "version": "0.55.0",
+  "wheel": {
+    "installed": true,
+    "path": "dist/equinox_forge-0.55.0-py3-none-any.whl",
+    "sha256": "8651a050bb5034fe73c460689bf3d037bfee26dba6d2bdc3fb1dc2893fc283fc"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "format": "equinox-forge-top-down-teacher-contract-v1",
+  "requirements": {
+    "canonical_output_must_be_numeric": true,
+    "extractor_defaults_must_contain_no_concrete_domain_ontology": true,
+    "materialization_order_must_be_root_to_leaf": true,
+    "recursive_macro_collapse_must_consume_extracted_structure": true,
+    "source_manifest_must_be_persisted": true,
+    "structural_closure_must_consume_extracted_ids": true,
+    "teacher_hierarchy_cycles_must_be_rejected": true,
+    "teacher_parent_evidence_must_determine_hierarchy": true
+  },
+  "version": "0.47"
+}

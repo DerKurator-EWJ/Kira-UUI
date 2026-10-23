@@ -1,0 +1,51 @@
+{
+  "benchmark": {
+    "dataset_sha256": "9a68c0ae24c7db62c3f104ca75d63d541fd0d5cb4ebd970dd635570c77d9a118",
+    "headline_metrics": {
+      "exact_replay_top1": 1.0,
+      "heldout_relation_family_top1": 0.0,
+      "known_or_mixed_unsupported_rejection_rate": 1.0,
+      "known_parts_recombination_top1": 1.0,
+      "known_suffix_transfer_top1": 1.0,
+      "novel_entity_known_frame_top1": 0.0,
+      "novel_order_known_lexicon_top1": 1.0,
+      "typed_frame_precision": 1.0,
+      "typed_frame_recall": 1.0,
+      "unknown_rejection_rate": 1.0
+    },
+    "historical_v031_baseline_reproduced": true,
+    "intentional_tradeoff": "L4 lexical-only novel entity drops from 1.0 to 0.0 because Wolf/Stein are runtime-indistinguishable without semantic admission."
+  },
+  "format": "equinox-forge-release-validation-v1",
+  "packaging": {
+    "compileall": "pass",
+    "eqforge_entrypoint": "pass",
+    "eqforge_gauntlet_entrypoint": "pass",
+    "eqforge_support_gate_entrypoint": "pass",
+    "fresh_venv_wheel_install": "pass",
+    "installed_support_gate_benchmark": "pass",
+    "wheel": "dist/equinox_forge-0.32.0-py3-none-any.whl",
+    "wheel_build": "pass",
+    "wheel_sha256": "d550d210c826339f4eca47c4cc8c20307138daa187b62e581d3e74742124f401"
+  },
+  "release": "Support-Gated Prediction",
+  "runtime": {
+    "default_support_gate_enabled": true,
+    "format": "equinox-runtime-cognition-v2",
+    "legacy_ablation_available": true,
+    "version": "0.32"
+  },
+  "tests": {
+    "discovered": 36,
+    "execution_note": "Full suite was covered in sequential split runs because the outer command window truncated combined runs; every discovered test file completed successfully.",
+    "failed": 0,
+    "passed": 36,
+    "slow_runtime_tests": [
+      "test_tiny_causal_runtime.py",
+      "test_tiny_contextual_runtime.py",
+      "test_tiny_retention_runtime.py"
+    ],
+    "status": "pass"
+  },
+  "version": "0.32.0"
+}

@@ -1,0 +1,29 @@
+{
+  "controls": {
+    "coarse_predicate_ambiguity_no_longer_blocks_all_shortcuts": true,
+    "forge_db_off_before_runtime": true,
+    "macro_routing_is_actually_used": true,
+    "macro_routing_reduces_hierarchy_work": true,
+    "multi_valued_property_action_closure_is_lossless": true,
+    "recursive_macro_collapse_survives_faceting": true,
+    "relation_ids_are_first_class_numeric_objects": true,
+    "relation_ids_have_numeric_family_membership": true,
+    "teacher_off_before_runtime": true
+  },
+  "family_query_accuracy": 1.0,
+  "format": "equinox-v051-relation-facet-reference-v1",
+  "macro_count": 3,
+  "macro_levels": 2,
+  "relation_facet_count": 8,
+  "relation_hierarchy_triple_count": 8,
+  "teacher_queries": 16,
+  "version": "0.51",
+  "work": {
+    "baseline_nodes_touched": 112,
+    "macro_nodes_touched": 88,
+    "macro_routed_values": 24,
+    "macro_shortcut_count": 24,
+    "node_reduction_fraction": 0.2142857142857143,
+    "resolved_values": 24
+  }
+}

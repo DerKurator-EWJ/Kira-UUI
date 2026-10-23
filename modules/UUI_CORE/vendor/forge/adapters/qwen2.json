@@ -1,0 +1,21 @@
+{
+  "format": "equinox-forge-hf-adapter-v1",
+  "adapter_id": "hf-qwen2-v1",
+  "family": "qwen2",
+  "model_types": ["qwen2"],
+  "architectures": ["Qwen2ForCausalLM"],
+  "modality": "text",
+  "q_strategy": "unicode_character",
+  "tokenizer": {"required": true, "mode": "huggingface-local"},
+  "tensor_roles": [
+    {"role": "input_embeddings", "candidates": ["model.embed_tokens.weight"], "patterns": [], "required": true, "description": "Input embedding matrix."},
+    {"role": "output_head", "candidates": ["lm_head.weight"], "patterns": [], "required": false, "description": "Output head when untied/present."},
+    {"role": "transformer_layers", "candidates": [], "patterns": ["model.layers.*.*"], "required": false, "description": "Optional layer tensor family."}
+  ],
+  "extraction_channels": [
+    {"name": "token_embedding_neighbors", "enabled": true, "requires_roles": ["input_embeddings"], "runtime_required": false, "description": "Sparse embedding-neighbour evidence."},
+    {"name": "output_prediction_priors", "enabled": true, "requires_roles": ["output_head"], "runtime_required": false, "description": "Directed prediction evidence when output head is available."},
+    {"name": "runtime_hidden_states", "enabled": true, "requires_roles": [], "runtime_required": true, "description": "Probe-corpus hidden-state extraction."}
+  ],
+  "metadata": {"notes": "Qwen2 family template; resolved against local tensor names before use."}
+}

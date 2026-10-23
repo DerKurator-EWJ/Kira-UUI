@@ -1,0 +1,24 @@
+{
+  "added_evaluation_families": [
+    "adversarial_unsupported_recombination",
+    "typed_frame_counterexample",
+    "ambiguity_separation"
+  ],
+  "added_metrics": [
+    "all_unknown_rejection_rate",
+    "known_or_mixed_unsupported_rejection_rate",
+    "typed_frame_applicability_precision",
+    "typed_frame_applicability_recall",
+    "ambiguity_cluster_purity"
+  ],
+  "extends": "benchmarks/v0_30/benchmark_contract.json",
+  "format": "equinox-forge-benchmark-contract-extension-v1",
+  "frozen": true,
+  "policy": {
+    "composite_overall_score_prohibited": true,
+    "future_cases_may_be_appended": true,
+    "gauntlet_cases_may_change": false,
+    "timing_not_strict_cross_machine_regression": true
+  },
+  "version": "0.31"
+}

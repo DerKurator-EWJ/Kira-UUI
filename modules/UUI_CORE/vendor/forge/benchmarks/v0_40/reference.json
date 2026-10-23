@@ -1,0 +1,162 @@
+{
+  "baseline_v039": {
+    "heldout_fact": {
+      "abstention_rate": 0.5,
+      "accuracy": 0.140625,
+      "cases": 64
+    },
+    "opaque_relation": {
+      "abstention_rate": 1.0,
+      "accuracy": 0.0,
+      "cases": 32
+    },
+    "outside_domain_control": {
+      "abstention_rate": 1.0,
+      "accuracy": 0.0,
+      "cases": 8
+    },
+    "paraphrase": {
+      "abstention_rate": 0.0,
+      "accuracy": 0.921875,
+      "cases": 64
+    },
+    "replay": {
+      "abstention_rate": 0.0,
+      "accuracy": 0.921875,
+      "cases": 64
+    }
+  },
+  "controls": {
+    "heldout_not_artificially_filled": true,
+    "opaque_relation_still_abstains": true,
+    "outside_domain_still_abstains": true,
+    "paraphrase_restored_without_recompile": true,
+    "replay_restored_without_recompile": true
+  },
+  "delta": {
+    "heldout_fact": {
+      "abstention_rate": 0.0,
+      "accuracy": 0.0
+    },
+    "opaque_relation": {
+      "abstention_rate": 0.0,
+      "accuracy": 0.0
+    },
+    "outside_domain_control": {
+      "abstention_rate": 0.0,
+      "accuracy": 0.0
+    },
+    "paraphrase": {
+      "abstention_rate": 0.0,
+      "accuracy": 0.078125
+    },
+    "replay": {
+      "abstention_rate": 0.0,
+      "accuracy": 0.078125
+    }
+  },
+  "failure_trace_retest": {
+    "authority_active": true,
+    "authority_candidates": 1,
+    "category": "replay",
+    "correct": true,
+    "expected": "savanne",
+    "matches_teacher": true,
+    "prediction_relation_checks": 64,
+    "prompt": "löwe lebt im",
+    "recall_nodes": 20,
+    "runtime_ms": 0.4218459998810431,
+    "teacher_top1": "savanne",
+    "top1": "savanne",
+    "top_candidates": [
+      {
+        "direct_score": 0.8803648152744792,
+        "recalled_score": 0.32662631020547517,
+        "score": 0.9194408142321264,
+        "surface": "savanne",
+        "transition_score": 0.0
+      },
+      {
+        "direct_score": 0.0,
+        "recalled_score": 0.9392020641449322,
+        "score": 0.9392020641449322,
+        "surface": "land",
+        "transition_score": 0.0
+      },
+      {
+        "direct_score": 0.0,
+        "recalled_score": 0.6990941134835231,
+        "score": 0.6990941134835231,
+        "surface": "wasser",
+        "transition_score": 0.0
+      },
+      {
+        "direct_score": 0.0,
+        "recalled_score": 0.3268071693954009,
+        "score": 0.3268071693954009,
+        "surface": "berg",
+        "transition_score": 0.0
+      }
+    ]
+  },
+  "format": "equinox-forge-v0.40-exact-context-authority-reference-v1",
+  "observations": [
+    "replay and suffix-paraphrase retention recover from 0.921875 to 1.0 without recompilation or additional teacher probes",
+    "heldout_fact behavior is unchanged, showing the authority tier does not manufacture missing knowledge",
+    "opaque relation and outside-domain abstention remain at 1.0",
+    "the lion habitat case is corrected even though the recalled Land candidate retains a numerically higher aggregate score"
+  ],
+  "policy": {
+    "enable_exact_context_authority": true,
+    "exact_context_authority_include_suffix": true,
+    "exact_context_authority_min_direct_score": 0.5
+  },
+  "same_compiled_pack_as_v039_baseline": true,
+  "v040": {
+    "heldout_fact": {
+      "abstention_rate": 0.5,
+      "accuracy": 0.140625,
+      "authority_activation_rate": 0.0,
+      "average_prediction_relation_checks": 32.0,
+      "average_recall_nodes": 20.5,
+      "cases": 64,
+      "runtime_ms_per_case": 0.3511006718497356
+    },
+    "opaque_relation": {
+      "abstention_rate": 1.0,
+      "accuracy": 0.0,
+      "authority_activation_rate": 0.0,
+      "average_prediction_relation_checks": 0.0,
+      "average_recall_nodes": 3.0,
+      "cases": 32,
+      "runtime_ms_per_case": 0.07240681264875093
+    },
+    "outside_domain_control": {
+      "abstention_rate": 1.0,
+      "accuracy": 0.0,
+      "authority_activation_rate": 0.0,
+      "average_prediction_relation_checks": 0.0,
+      "average_recall_nodes": 18.0,
+      "cases": 8,
+      "runtime_ms_per_case": 0.19949787542827835
+    },
+    "paraphrase": {
+      "abstention_rate": 0.0,
+      "accuracy": 1.0,
+      "authority_activation_rate": 1.0,
+      "average_prediction_relation_checks": 34.0,
+      "average_recall_nodes": 19.5,
+      "cases": 64,
+      "runtime_ms_per_case": 0.35073432795229564
+    },
+    "replay": {
+      "abstention_rate": 0.0,
+      "accuracy": 1.0,
+      "authority_activation_rate": 1.0,
+      "average_prediction_relation_checks": 34.0,
+      "average_recall_nodes": 19.5,
+      "cases": 64,
+      "runtime_ms_per_case": 0.3511609061774834
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "format": "equinox-forge-release-validation-v1",
+  "version": "0.46.0",
+  "release": "Recursive Macro Collapse",
+  "regression_tests": {
+    "total": 50,
+    "passed": 50,
+    "failed": 0,
+    "execution_note": "47 non-slow regressions were executed in deterministic chunks; the three local tiny neural-teacher runtime tests were executed separately because of outer command time limits."
+  },
+  "compileall": true,
+  "runtime_cognition_byteidentical_to_v045": true,
+  "runtime_cognition_sha256": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+  "wheel": {
+    "filename": "equinox_forge-0.46.0-py3-none-any.whl",
+    "sha256": "854fb06d7e4743efa77e2b46d76434caaf5a23ee800a4b8286e35d23bacf9a7f",
+    "fresh_venv_install": true,
+    "installed_cli_smoke": true
+  },
+  "reference": {
+    "levels_built": 2,
+    "macro_count": 3,
+    "membership_count": 6,
+    "local_relation_count": 9,
+    "effective_relation_count": 15,
+    "potential_reference_savings": 9,
+    "digest": "92d0abce862925ff3abffb31aa19c2d3a139895e70d577c42690bc7f4fa4efed",
+    "all_controls": true
+  }
+}

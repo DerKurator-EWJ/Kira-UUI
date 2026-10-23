@@ -1,0 +1,31 @@
+{
+  "compileall": true,
+  "format": "equinox-forge-release-validation-v1",
+  "installed_recursive_relation_trial": {
+    "digest": "5278ca00251d6e2db62fffab56c08df777445ec980b0ceb10a9c95e0b814b45c",
+    "effective_meta_fact_count": 5,
+    "levels_built": 2,
+    "local_meta_fact_count": 3,
+    "macro_count": 3,
+    "membership_count": 10,
+    "potential_reference_savings": 4,
+    "predicate_ready_macro_count": 3
+  },
+  "runtime_hashes_unchanged_from_v0_51": {
+    "macro_numeric_runtime.py": "76f7aa3d9df1d124f4028e20a447da9f2e83d6cbf3b3cc0d9f1c99df0de33061",
+    "numeric_runtime.py": "cbe355ef447ef111a6ab6aa34f838da12f6105905d64765e3fd9a415a72dcf47",
+    "runtime_cognition.py": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d"
+  },
+  "scope_note": "v0.52 proves recursive predicate/relation-ID collapse and predicate readiness. Runtime routing through relation macros is intentionally deferred.",
+  "tests": {
+    "failed": 0,
+    "passed": 56,
+    "total": 56
+  },
+  "version": "0.52.0",
+  "wheel": {
+    "installed": true,
+    "path": "dist/equinox_forge-0.52.0-py3-none-any.whl",
+    "sha256": "d257a75a1551dcb2b132a5b70053d5a01b2ce95a6a423c8170235be479283327"
+  }
+}

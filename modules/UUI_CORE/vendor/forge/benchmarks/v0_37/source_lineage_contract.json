@@ -1,0 +1,17 @@
+{
+  "version": "0.37",
+  "raw_correlated_sources": 3,
+  "effective_correlated_lineages": 1,
+  "raw_independent_sources": 3,
+  "effective_independent_lineages": 2,
+  "multi_parent_bridge_effective_lineages": 1,
+  "expected_lifecycle_status_sequence": [
+    "candidate",
+    "candidate",
+    "stable",
+    "contested",
+    "contested",
+    "quarantined"
+  ],
+  "stable_runtime_top1": "Haus"
+}

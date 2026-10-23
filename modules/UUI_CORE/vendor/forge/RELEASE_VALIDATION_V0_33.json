@@ -1,0 +1,41 @@
+{
+  "claims": {
+    "l4_evidence_backed_novel_entity_top1": 1.0,
+    "l5_heldout_relation_top1": 0.0,
+    "runtime_enforces_source_lineage_independence": false,
+    "stone_rejected": true,
+    "surface_only_l4_top1": 0.0
+  },
+  "compileall": true,
+  "installed_benchmark_headline": {
+    "known_recombination_preserved": true,
+    "l0_exact_replay_top1": 1.0,
+    "l1_suffix_transfer_top1": 1.0,
+    "l2_recombination_top1": 1.0,
+    "l3_novel_order_top1": 1.0,
+    "l4_evidence_backed_novel_entity_top1": 1.0,
+    "l5_heldout_relation_top1": 0.0,
+    "stone_semantic_rejected": true,
+    "surface_only_l4_top1": 0.0,
+    "surface_presence_alone_rejected": true,
+    "unsupported_known_mix_rejected": true,
+    "wolf_semantic_admitted": true
+  },
+  "installed_cli": {
+    "eqforge": true,
+    "eqforge-gauntlet": true,
+    "eqforge-novel-entity": true,
+    "eqforge-support-gate": true
+  },
+  "milestone": "Evidence-Backed Novel Entity Admission",
+  "release": "0.33.0",
+  "tests": {
+    "failed": 0,
+    "passed": 37,
+    "total": 37
+  },
+  "wheel": {
+    "file": "dist/equinox_forge-0.33.0-py3-none-any.whl",
+    "sha256": "2deda8dcfe3680da4ccb3bbe572f4513b68e57e04cba078a67088a7faaaea254"
+  }
+}

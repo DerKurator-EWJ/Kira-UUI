@@ -1,0 +1,31 @@
+{
+  "compileall": "passed",
+  "format": "equinox-forge-release-validation-v1",
+  "installed_cli": "passed",
+  "installed_reference_controls": "passed",
+  "numeric_runtime_pack_digest": "95d8df4c78f7b0f892d336bbb3835a2b4250814186a24d273e8254db04a17427",
+  "reference_controls": {
+    "cycle_safe_parent_traversal": true,
+    "local_override": true,
+    "no_canonical_triple_duplication": true,
+    "quality_gated_parent_fallback": true,
+    "runtime_db_independence": true,
+    "same_depth_conflict_abstention": true,
+    "specific_to_general_resolution": true,
+    "surface_io_separation": true
+  },
+  "release": "Specific-to-General Numeric Runtime",
+  "runtime_cognition_sha256": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+  "runtime_cognition_unchanged_from_v0_47": true,
+  "tests": {
+    "passed": 52,
+    "status": "passed",
+    "total": 52
+  },
+  "version": "0.48.0",
+  "wheel": {
+    "fresh_install": "passed",
+    "path": "dist/equinox_forge-0.48.0-py3-none-any.whl",
+    "sha256": "2a94a24c82ce7b95844ca73406a97b644765bb5ffa0aa252f4c97a9ea891a166"
+  }
+}

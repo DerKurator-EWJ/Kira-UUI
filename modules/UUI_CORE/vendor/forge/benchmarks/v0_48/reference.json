@@ -1,0 +1,45 @@
+{
+  "controls": {
+    "owl_inherits_animal_state_at_depth_2": true,
+    "owl_inherits_bird_covering_at_depth_1": true,
+    "owl_inherits_bird_flight_at_depth_1": true,
+    "owl_local_fact_stays_local": true,
+    "penguin_local_override_beats_stronger_parent": true,
+    "runtime_core_relations_are_numeric": true,
+    "runtime_is_db_free_after_pack_load": true,
+    "runtime_pack_preserves_canonical_triple_count": true,
+    "surface_layer_resolves_into_same_numeric_runtime": true,
+    "unknown_predicate_abstains": true,
+    "weak_local_fact_below_threshold_falls_back_to_parent": true
+  },
+  "depths": {
+    "owl_activity": 0,
+    "owl_alive": 2,
+    "owl_can_fly": 1,
+    "owl_covering": 1,
+    "owl_unknown": null,
+    "penguin_can_fly": 0,
+    "surface_eule_covering": 1,
+    "weakbird_can_fly": 1
+  },
+  "format": "equinox-forge-specific-general-numeric-runtime-reference-v1",
+  "runtime_pack": {
+    "digest": "95d8df4c78f7b0f892d336bbb3835a2b4250814186a24d273e8254db04a17427",
+    "file_bytes": 1359,
+    "format": "equinox-specific-general-numeric-runtime-v1",
+    "relation_count": 10,
+    "surface_binding_count": 4,
+    "version": "0.48"
+  },
+  "statuses": {
+    "owl_activity": "resolved",
+    "owl_alive": "resolved",
+    "owl_can_fly": "resolved",
+    "owl_covering": "resolved",
+    "owl_unknown": "not_found",
+    "penguin_can_fly": "resolved",
+    "surface_eule_covering": "resolved",
+    "weakbird_can_fly": "resolved"
+  },
+  "version": "0.48"
+}

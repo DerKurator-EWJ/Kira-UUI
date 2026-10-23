@@ -1,0 +1,56 @@
+{
+  "200": {
+    "v03": {
+      "ingest_ms": 11.3,
+      "consolidate_ms": 0.76,
+      "predict_ms": 0.2094,
+      "db_bytes": 28672,
+      "period": 2,
+      "predicted": "502"
+    },
+    "v04": {
+      "ingest_ms": 20.58,
+      "consolidate_ms": 0.22,
+      "predict_ms": 0.0121,
+      "db_bytes": 45056,
+      "period": 2,
+      "predicted": "502"
+    }
+  },
+  "1000": {
+    "v03": {
+      "ingest_ms": 59.52,
+      "consolidate_ms": 3.39,
+      "predict_ms": 1.0213,
+      "db_bytes": 65536,
+      "period": 2,
+      "predicted": "2502"
+    },
+    "v04": {
+      "ingest_ms": 105.65,
+      "consolidate_ms": 0.22,
+      "predict_ms": 0.0129,
+      "db_bytes": 81920,
+      "period": 2,
+      "predicted": "2502"
+    }
+  },
+  "3000": {
+    "v03": {
+      "ingest_ms": 165.14,
+      "consolidate_ms": 9.27,
+      "predict_ms": 3.2651,
+      "db_bytes": 147456,
+      "period": 2,
+      "predicted": "7502"
+    },
+    "v04": {
+      "ingest_ms": 296.71,
+      "consolidate_ms": 0.27,
+      "predict_ms": 0.0113,
+      "db_bytes": 163840,
+      "period": 2,
+      "predicted": "7502"
+    }
+  }
+}

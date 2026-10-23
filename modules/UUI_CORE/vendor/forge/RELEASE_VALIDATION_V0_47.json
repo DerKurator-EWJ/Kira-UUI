@@ -1,0 +1,41 @@
+{
+  "format": "equinox-forge-release-validation-v1",
+  "version": "0.47.0",
+  "release": "Top-Down Teacher Structure Extraction",
+  "regression_tests": {
+    "total": 51,
+    "passed": 51,
+    "failed": 0,
+    "execution_note": "All test files were executed successfully in deterministic batches; the three slow local neural-teacher runtime tests were executed separately."
+  },
+  "compileall": true,
+  "runtime_cognition": {
+    "version": "0.40",
+    "sha256": "54f047861b147d058bd51d7f4159ef7c989601322514323915819c4c1d760b6d",
+    "byte_identical_to_v0_46": true
+  },
+  "wheel": {
+    "filename": "equinox_forge-0.47.0-py3-none-any.whl",
+    "sha256": "5efb800c4884c939f10c95ade72f85fd156ae352536a0db9fdb65d276a0749e6",
+    "fresh_target_install": true,
+    "packaged_fixture_present": true,
+    "installed_reference_controls_all_true": true
+  },
+  "v0_47_reference": {
+    "teacher_is_neural": true,
+    "seed_count": 4,
+    "concept_count": 9,
+    "root_count": 1,
+    "parent_edge_count": 8,
+    "attribute_edge_count": 8,
+    "teacher_queries": 16,
+    "max_hierarchy_depth": 4,
+    "structural_closure_roots": 4,
+    "recursive_macro_levels": 2,
+    "recursive_macro_count": 3,
+    "source_manifest_persisted": true,
+    "hierarchy_cycle_rejection": true,
+    "seed_order_invariance": true
+  },
+  "scope_boundary": "Controlled offline neural-teacher proof. The generic extractor accepts any CausalTeacherBackend, but v0.47 does not claim autonomous ontology extraction from a large pretrained Hugging Face world model."
+}

@@ -1,0 +1,18 @@
+{
+  "concept_shortcut_count": 24,
+  "fact_count": 23,
+  "format": "equinox-unified-numeric-execution-kernel-v1",
+  "pack_digest": "33a5452bf5c629357b9336dd5fb73deef32c099fd0361e9733d5f07c4859442e",
+  "pack_sizes": {
+    "flat_v055_json_bytes": 7559,
+    "fraction_of_nested": 0.6723294494352041,
+    "nested_v054_json_bytes": 11243
+  },
+  "parity": {
+    "failure_count": 0,
+    "query_pairs_compared": 240,
+    "resolved_query_pairs": 97
+  },
+  "route_count": 15,
+  "version": "0.55"
+}

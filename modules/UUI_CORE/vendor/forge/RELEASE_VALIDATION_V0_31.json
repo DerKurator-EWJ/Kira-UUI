@@ -1,0 +1,32 @@
+{
+  "cognition_change_audit": {
+    "new_cognitive_mechanism": false,
+    "new_module": "equinox_forge/baseline_gauntlet.py",
+    "only_preexisting_file_changed": "equinox_forge/__init__.py (version string only)",
+    "preexisting_modules_byteidentical": 40,
+    "preexisting_python_modules_compared": 40
+  },
+  "frozen_baseline": {
+    "dataset_sha256": "9a68c0ae24c7db62c3f104ca75d63d541fd0d5cb4ebd970dd635570c77d9a118",
+    "headline_reference": "benchmarks/v0_31/baseline_reference.json"
+  },
+  "package_version": "0.31.0",
+  "release": "Equinox Forge v0.31 Baseline Gauntlet",
+  "validation": {
+    "compileall": "pass",
+    "editable_install": "pass",
+    "eqforge_entrypoint": "pass",
+    "eqforge_gauntlet_entrypoint": "pass",
+    "installed_gauntlet_run": "pass",
+    "test_execution_note": "All 35 test_*.py files passed across sequential batch runs; monolithic/parallel aggregate attempts were limited by the execution harness timeout, not test failures.",
+    "test_files": 35,
+    "test_files_failed": 0,
+    "test_files_passed": 35,
+    "wheel_build": "pass"
+  },
+  "wheel": {
+    "bytes": 177187,
+    "filename": "equinox_forge-0.31.0-py3-none-any.whl",
+    "sha256": "ec26a623cc53f708c0c8e29ca12ecd79705f3d35833cbdd1147f6f6df3acfc94"
+  }
+}

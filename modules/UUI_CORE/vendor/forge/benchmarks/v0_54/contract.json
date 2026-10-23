@@ -1,0 +1,14 @@
+{
+  "format": "equinox-v054-unified-numeric-relation-routing-contract-v1",
+  "version": "0.54",
+  "frozen": true,
+  "requirements": {
+    "family_queries_compile_to_numeric_relation_macro_aliases": true,
+    "ordinary_scalar_relations_use_the_same_public_resolve_api": true,
+    "runtime_must_not_call_legacy_family_resolution": true,
+    "property_and_action_semantics_match_v051_family_view": true,
+    "direct_relation_macro_queries_remain_supported": true,
+    "runtime_route_table_is_numeric_only": true,
+    "relation_macros_add_no_new_semantic_authority": true
+  }
+}

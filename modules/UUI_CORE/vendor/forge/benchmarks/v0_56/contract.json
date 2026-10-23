@@ -1,0 +1,21 @@
+{
+  "format": "equinox-v0.56-direct-teacher-flat-contract-v1",
+  "forge_version": "0.56.0",
+  "runtime_format_version": "0.55",
+  "requirements": {
+    "teacher_queries": 16,
+    "concept_macro_levels_min": 2,
+    "concept_macro_count_min": 3,
+    "relation_macro_levels_min": 2,
+    "relation_macro_count_min": 3,
+    "fact_count": 24,
+    "concept_shortcut_count": 24,
+    "route_count": 15,
+    "family_alias_route_count": 2,
+    "runtime_query_accuracy": 1.0,
+    "runtime_artifact_count": 1,
+    "legacy_oracle_core_parity": true,
+    "teacher_removed_before_runtime": true,
+    "forge_db_removed_before_runtime": true
+  }
+}

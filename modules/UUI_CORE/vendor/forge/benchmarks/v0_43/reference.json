@@ -1,0 +1,102 @@
+{
+  "active_budgeted": {
+    "full_accuracy": 0.6171875,
+    "selected_queries": 64,
+    "shadow_abstention_rate": 0.5,
+    "shadow_accuracy": 0.15625,
+    "shadow_mean_top1_score": 0.7494142441828351
+  },
+  "all_selectable_saturation": {
+    "full_accuracy": 0.7890625,
+    "selected_queries": 96,
+    "shadow_abstention_rate": 0.5,
+    "shadow_accuracy": 0.15625,
+    "shadow_mean_top1_score": 0.9662876462174805
+  },
+  "budgeted_queries": 64,
+  "controls": {
+    "opaque_relation_abstention_active": 1.0,
+    "opaque_relation_abstention_saturation": 1.0,
+    "outside_domain_abstention_active": 1.0,
+    "outside_domain_abstention_saturation": 1.0,
+    "shadow_never_queried_in_active": true,
+    "shadow_never_queried_in_saturation": true,
+    "shadow_never_queried_in_seed": true
+  },
+  "core_facts": 128,
+  "diagnostic_unique_teacher_queries": 96,
+  "diffs": {
+    "active_vs_seed": {
+      "changed_top1_prompts": [],
+      "mean_top1_score_delta": 0.0,
+      "score_changes": 0,
+      "shadow_abstention_delta": 0.0,
+      "shadow_accuracy_delta": 0.0,
+      "top1_changes": 0
+    },
+    "saturation_vs_seed": {
+      "changed_top1_prompts": [],
+      "mean_top1_score_delta": 0.21687340203464545,
+      "score_changes": 16,
+      "shadow_abstention_delta": 0.0,
+      "shadow_accuracy_delta": 0.0,
+      "top1_changes": 0
+    }
+  },
+  "domain_entities": 32,
+  "findings": {
+    "all_selectable_changes_shadow_scores": true,
+    "all_selectable_changes_shadow_top1": false,
+    "all_selectable_improves_shadow_over_seed": false,
+    "budgeted_active_improves_shadow_over_seed": false,
+    "interpretation": "Within the tested v0.40 runtime, acquisition changes confidence mass but not the frozen shadow top-1 decisions. The bottleneck is therefore representation/transfer, not merely prompt selection.",
+    "selector_leverage_observed_on_frozen_shadow": false,
+    "tested_random_schedules_change_shadow_accuracy": false
+  },
+  "format": "equinox-forge-marginal-structural-gain-audit-v1",
+  "random_schedule_search": {
+    "shadow_accuracy_max": 0.15625,
+    "shadow_accuracy_mean": 0.15625,
+    "shadow_accuracy_min": 0.15625,
+    "top1_changes_from_seed_max": 8,
+    "top1_changes_from_seed_min": 0,
+    "trials": 24
+  },
+  "relation_extremes": [
+    {
+      "full_accuracy": 0.546875,
+      "relation_key": "class",
+      "shadow_abstention_rate": 0.5,
+      "shadow_accuracy": 0.15625
+    },
+    {
+      "full_accuracy": 0.546875,
+      "relation_key": "habitat",
+      "shadow_abstention_rate": 0.5,
+      "shadow_accuracy": 0.15625
+    },
+    {
+      "full_accuracy": 0.5546875,
+      "relation_key": "ability",
+      "shadow_abstention_rate": 0.5,
+      "shadow_accuracy": 0.15625
+    },
+    {
+      "full_accuracy": 0.5546875,
+      "relation_key": "trait",
+      "shadow_abstention_rate": 0.5,
+      "shadow_accuracy": 0.15625
+    }
+  ],
+  "seed": {
+    "full_accuracy": 0.3671875,
+    "selected_queries": 32,
+    "shadow_abstention_rate": 0.5,
+    "shadow_accuracy": 0.15625,
+    "shadow_mean_top1_score": 0.7494142441828351
+  },
+  "seed_queries": 32,
+  "selectable_facts": 96,
+  "shadow_holdout_facts": 32,
+  "version": "0.43"
+}

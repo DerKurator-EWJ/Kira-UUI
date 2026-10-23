@@ -1,0 +1,40 @@
+{
+  "batch_size": 8,
+  "benchmark": "v0.42 iterative active learning with fixed shadow holdout",
+  "checkpoints": [
+    32,
+    40,
+    48,
+    56,
+    64
+  ],
+  "core_facts": 128,
+  "fairness": [
+    "same frozen shadow holdout for every strategy",
+    "same seed for active/random controls",
+    "teacher answers hidden until a prompt is selected",
+    "query cache prevents repeated compilation from increasing unique teacher-query count"
+  ],
+  "final_query_budget": 64,
+  "interpretation": "overall accuracy may improve by querying difficult selectable facts; genuine transfer is measured only on the identical never-queryable shadow holdout",
+  "required_controls": [
+    "opaque relation abstention remains 1.0",
+    "outside-domain abstention remains 1.0",
+    "unique teacher-query count equals budget"
+  ],
+  "runtime_changed": false,
+  "seed_queries": 32,
+  "selectable_pool": 96,
+  "shadow_holdout": {
+    "facts": 32,
+    "rule": "relation_index == (entity_index + 2) mod 4",
+    "teacher_query_eligible": false
+  },
+  "strategies": [
+    "iterative active",
+    "v0.41-style one-shot active",
+    "fixed",
+    "seeded random"
+  ],
+  "teacher": "same deterministic trained PyTorch domain teacher as v0.39-v0.41"
+}
