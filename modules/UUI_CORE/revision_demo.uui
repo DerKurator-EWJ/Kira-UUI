@@ -1,0 +1,8 @@
+# Bei wiederholtem Lauf mit derselben Datenbank: neue event_ids verwenden.
+hier lern_draus("objekt_a", "farbe", "rot", "person", "revision_demo_001", "external_claim", 1 / 2)
+hier lern_draus("objekt_a", "farbe", "blau", "kamera_1", "revision_demo_002", "observation", 3 / 4)
+hier such_widerspruch()
+# Review-ID aus der Ausgabe einsetzen:
+# hier pruef_revision("<review_id>")
+# hier entscheide_revision("<review_id>", "retain_both", "Quellen noch nicht unabhängig geprüft")
+# hier revision_verlauf("<review_id>")

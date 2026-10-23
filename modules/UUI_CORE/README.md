@@ -26,3 +26,7 @@ Default Kira DB is in-memory, so evidence persists for the bridge's lifetime onl
 ## Caution
 
 `lern_draus` currently accepts strings as claims, with `source_type='external_claim'` and confidence defaulting to 1.0 as provided by the underlying evidence layer. This is **not a calibrated confidence** and should not be interpreted as truth. A future release should require explicit source type, context and confidence and expose a typed evidence result.
+
+## Version 0.7
+
+Siehe `README_07.md`. Drei neue Funktionen zur **kontrollierten** Evidenzrevision mit Audit-Trail; 52 Tests bestanden (Python-Version der Laufzeitumgebung). Keine automatische Wahrheitsentscheidung oder selbstständiges Modelltraining.

@@ -10,7 +10,7 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('program',type=Path)
     p.add_argument('--compile',action='store_true',help='Compile .uui into .uuix without running')
-    p.add_argument('--database',default=':memory:')
+    p.add_argument('--database',default='kira_uui.sqlite',help='Persistent SQLite database (use :memory: for temporary runs)')
     p.add_argument('--forge-pack',default=None)
     args=p.parse_args()
     try:

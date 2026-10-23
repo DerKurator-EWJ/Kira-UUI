@@ -3,6 +3,7 @@ from fractions import Fraction
 from dataclasses import dataclass
 import uuid
 import json
+from uui_revision import install, propose, apply, history
 
 FAMILIES = {
  'wahrnehmung': ('guck','hoer','spuer'),
@@ -20,6 +21,7 @@ FAMILIES = {
  'system': ('wer_darf','was_kostet','stopp'),
 }
 ALL = {name: family for family, names in FAMILIES.items() for name in names}
+REVISION_OPS = {name:"revision" for name in ("pruef_revision","entscheide_revision","revision_verlauf")}
 assert len(ALL)==39
 
 # Operations return JSON-serializable strings where UUI 0.3 lacks maps/lists.
@@ -35,6 +37,12 @@ def invoke(name, args, runtime):
         return v
     # Evidence functions return JSON strings because UUI 0.4 has no record/list type.
     # All observations are explicitly attributed; inquiries do not invent answers.
+    if name=='pruef_revision':
+        arity(1); return json.dumps(propose(runtime.bridge.evidence,string(args[0])),ensure_ascii=False,sort_keys=True)
+    if name=='entscheide_revision':
+        arity(3); return json.dumps(apply(runtime.bridge.evidence,*map(string,args)),ensure_ascii=False,sort_keys=True)
+    if name=='revision_verlauf':
+        arity(1); return json.dumps(history(runtime.bridge.evidence,string(args[0])),ensure_ascii=False,sort_keys=True)
     if name=='was_weisst_du':
         arity(2); subject,predicate=map(string,args)
         records=runtime.bridge.evidence.evidence_for(subject,predicate)
@@ -57,13 +65,25 @@ def invoke(name, args, runtime):
     if name=='lern_draus':
         # A supplied observation is recorded as evidence, not automatically promoted
         # to truth. Contradictions remain open for human/system review.
-        arity(5)
-        subject,predicate,value,source_ref,event_id=args
+        if len(args) not in (5,6,7):
+            raise ValueError('lern_draus expects 5, 6 or 7 arguments')
+        subject,predicate,value,source_ref,event_id=args[:5]
         for x in (subject,predicate,value,source_ref,event_id):string(x)
+        source_type = string(args[5]) if len(args)>=6 else 'external_claim'
+        # Explicit provenance is mandatory for an observation; caller-supplied
+        # source labels are not independently verified by the runtime.
+        if source_type not in ('observation','action_result','external_claim','inference','premise'):
+            raise ValueError('invalid evidence source_type')
+        confidence=1.0
+        if len(args)==7:
+            c=number(args[6])
+            if not 0<=c<=1:raise ValueError('confidence must be between 0 and 1')
+            confidence=float(c)
         result=runtime.bridge.evidence.record(event_id=event_id,subject=subject,
-            predicate=predicate,value=value,source_type='external_claim',source_ref=source_ref)
+            predicate=predicate,value=value,source_type=source_type,
+            source_ref=source_ref,confidence=confidence)
         runtime.bridge.inquiry.sync_reviews()
-        return json.dumps({'recorded':True,'source_type':'external_claim',**result},ensure_ascii=False,sort_keys=True)
+        return json.dumps({'recorded':True,'source_type':source_type,'confidence':confidence,**result},ensure_ascii=False,sort_keys=True)
     if name=='was_waere_wenn':
         # Isolated counterfactual arithmetic; does not mutate runtime or evidence.
         arity(3); initial=number(args[0]);delta=number(args[1]);operation=string(args[2])
@@ -73,6 +93,21 @@ def invoke(name, args, runtime):
         result={'plus':lambda:initial+delta,'minus':lambda:initial-delta,
                 'mal':lambda:initial*delta,'geteilt':lambda:initial/delta}[operation]()
         return result
+    if name=='such_widerspruch':
+        arity(0)
+        return json.dumps({'reviews':runtime.bridge.evidence.pending_reviews()},ensure_ascii=False,sort_keys=True)
+    if name=='pruef_dich':
+        arity(2); subject,predicate=map(string,args)
+        evidence=runtime.bridge.evidence.evidence_for(subject,predicate)
+        active=[r for r in evidence if r['status']=='active']
+        contexts={json.dumps(r['context'],sort_keys=True,ensure_ascii=False) for r in active}
+        distinct={(json.dumps(r['value'],sort_keys=True,ensure_ascii=False),json.dumps(r['context'],sort_keys=True,ensure_ascii=False)) for r in active}
+        reviews=runtime.bridge.evidence.pending_reviews()
+        return json.dumps({'subject':subject,'predicate':predicate,'known':bool(evidence),
+          'evidence_count':len(evidence),'active_count':len(active),
+          'open_reviews':len(reviews),'conflict_possible':len(distinct)>len(contexts),
+          'verdict':'requires_review' if len(distinct)>len(contexts) else 'not_verified'},
+          ensure_ascii=False,sort_keys=True)
     if name=='was_ist_das':
         arity(1);return 'offen: '+str(args[0])
     if name=='warum':

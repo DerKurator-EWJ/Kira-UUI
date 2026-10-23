@@ -1,0 +1,5 @@
+# Wird mit --database kira_uui.sqlite auch nach einem Neustart gespeichert.
+hier lern_draus("objekt_a", "farbe", "rot", "nutzer_aussage", "demo_06_e1", "external_claim", 3 / 4)
+hier was_weisst_du("objekt_a", "farbe")
+hier pruef_dich("objekt_a", "farbe")
+hier such_widerspruch()
