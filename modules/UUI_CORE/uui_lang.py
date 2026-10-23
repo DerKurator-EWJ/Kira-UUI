@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from fractions import Fraction
 import json
 import re
+from uui_cognition import ALL as COGNITIVE_OPS, invoke as invoke_cognitive
 
 class UUIError(Exception): pass
 
@@ -153,6 +154,10 @@ class Runtime:
             self.require_bool(value);return not value
         if kind=='call':
             name=node[1]
+            if name in COGNITIVE_OPS:
+                args=[self.evaluate(a,env) for a in node[2]]
+                try:return invoke_cognitive(name,args,self)
+                except (ValueError,NotImplementedError,KeyError,TypeError) as e:raise UUIError(str(e)) from e
             if name not in self.functions:raise UUIError(f'Undefined function {name}')
             params,body=self.functions[name]
             if len(params)!=len(node[2]):raise UUIError(f'Wrong argument count for {name}')
@@ -213,7 +218,7 @@ class Runtime:
             elif op=='fn':
                 if inside_fn:raise UUIError('Nested function definitions unsupported')
                 name=statement[1]
-                if name in self.functions:raise UUIError(f'Function already declared: {name}')
+                if name in self.functions or name in COGNITIVE_OPS:raise UUIError(f'Function already declared or reserved: {name}')
                 self.functions[name]=(statement[2],statement[3])
             elif op=='return':
                 if not inside_fn:raise UUIError('Return outside function')

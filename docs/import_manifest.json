@@ -19,5 +19,12 @@
     "module": "UUI_CORE",
     "sha256_original_zip": "d08cd9c60575a640606e3b4214666fe6b4732fd71bfa5927dc50142369e2e4d8",
     "files_in_zip": 354
+  },
+  {
+    "tag": "uui-core-v0.4",
+    "source": "UUI_CORE_0_4.zip",
+    "module": "UUI_CORE",
+    "sha256_original_zip": "598ebaf2a6c63b8a6e610bad30ffc01c3bf2845ab680b0ff86937d11bfd042c9",
+    "files_in_zip": 357
   }
 ]

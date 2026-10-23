@@ -1,0 +1,7 @@
+# Kira-specific UUI functions (prototype semantics)
+es_sei beobachtung = merk_dir(1 / 3, "uui_cognition_demo")
+hier beobachtung
+hier warum_nicht("Alle gleichen Dinge bleiben immer gleich")
+hier ist_das_noch(1 / 3, 2 / 6)
+hier wie_sicher(3 / 4)
+hier was_kostet()
