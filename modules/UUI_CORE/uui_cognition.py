@@ -22,6 +22,7 @@ FAMILIES = {
 }
 ALL = {name: family for family, names in FAMILIES.items() for name in names}
 REVISION_OPS = {name:"revision" for name in ("pruef_revision","entscheide_revision","revision_verlauf")}
+RELATION_OPS = {name:"neutral_relations" for name in ("knoten","benenne","relation","haengt_ab_von","folgen_von","revidiere_relation","pruef_relation")}
 assert len(ALL)==39
 
 # Operations return JSON-serializable strings where UUI 0.3 lacks maps/lists.
@@ -35,6 +36,25 @@ def invoke(name, args, runtime):
     def number(v):
         if type(v) is not Fraction:raise ValueError(f'{name} expects a number')
         return v
+    # 0.8: opaque identity, explicitly typed relation and explicit dependency.
+    # Labels are optional metadata, never interpreted as knowledge.
+    if name in RELATION_OPS:
+        store=runtime.bridge.relations
+        if name=='knoten':
+            arity(1); result=store.node(string(args[0]))
+        elif name=='benenne':
+            arity(2); result=store.node(string(args[0]),string(args[1]))
+        elif name=='relation':
+            arity(4); result=store.relation(*map(string,args))
+        elif name=='haengt_ab_von':
+            arity(2); result=store.dependency(*map(string,args))
+        elif name=='folgen_von':
+            arity(1); result={'affected':store.affected(string(args[0]))}
+        elif name=='revidiere_relation':
+            arity(2); result=store.revise(*map(string,args))
+        elif name=='pruef_relation':
+            arity(1); result=store.inspect(string(args[0]))
+        return json.dumps(result,ensure_ascii=False,sort_keys=True)
     # Evidence functions return JSON strings because UUI 0.4 has no record/list type.
     # All observations are explicitly attributed; inquiries do not invent answers.
     if name=='pruef_revision':

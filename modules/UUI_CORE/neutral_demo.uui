@@ -1,0 +1,11 @@
+# Opaque identifiers: no apple/color or human semantics required.
+hier knoten("id:1001")
+hier knoten("id:1002")
+hier knoten("id:1003")
+hier relation("id:1001", "type:7", "id:1002", "rel:1")
+hier relation("id:1002", "type:9", "id:1003", "rel:2")
+# Explicit epistemic dependency, NOT inferred from node connectivity.
+hier haengt_ab_von("rel:1", "rel:2")
+hier folgen_von("rel:1")
+hier revidiere_relation("rel:1", "Test: Prämisse wird zurückgenommen")
+hier pruef_relation("rel:2")

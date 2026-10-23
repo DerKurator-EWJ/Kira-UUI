@@ -22,3 +22,4 @@ gesondert auf persoenliche Angaben und Rechte geprueft werden.
 | `uui-core-v0.4` | `UUI_CORE_0_4.zip` | `modules/UUI_CORE/` |
 | `uui-core-v0.5` | `UUI_CORE_0_5.zip` | `modules/UUI_CORE/` |
 | `uui-core-v0.7` | `UUI_CORE_0_7.zip` | `modules/UUI_CORE/` |
+| `uui-core-v0.8` | `UUI_CORE_0_8.zip` | `modules/UUI_CORE/` |

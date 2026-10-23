@@ -3,8 +3,8 @@ from dataclasses import dataclass
 from fractions import Fraction
 import json
 import re
-from uui_cognition import ALL as CORE_OPS, REVISION_OPS, invoke as invoke_cognitive
-COGNITIVE_OPS = CORE_OPS | REVISION_OPS
+from uui_cognition import ALL as CORE_OPS, REVISION_OPS, RELATION_OPS, invoke as invoke_cognitive
+COGNITIVE_OPS = CORE_OPS | REVISION_OPS | RELATION_OPS
 
 class UUIError(Exception): pass
 

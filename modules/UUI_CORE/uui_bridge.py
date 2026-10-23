@@ -10,6 +10,7 @@ from pathlib import Path
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE/'vendor'/'kira'))
 sys.path.insert(0,str(HERE/'vendor'/'forge'))
+from uui_relations import RelationStore
 from numeric_core import NumericCore
 from evidence_layer import EvidenceLayer
 from inquiry_controller import InquiryController
@@ -31,6 +32,7 @@ class UUIBridge:
     def __init__(self, *, forge_pack_path=None, kira_db=':memory:'):
         self.numeric=NumericCore(kira_db)
         self.evidence=EvidenceLayer(self.numeric.db)
+        self.relations=RelationStore(self.numeric.db)
         self.inquiry=InquiryController(self.evidence)
         self.planner=ExperimentPlanner(self.inquiry)
         self.forge=(UnifiedNumericExecutionKernel(load_unified_numeric_kernel_pack(forge_pack_path))
