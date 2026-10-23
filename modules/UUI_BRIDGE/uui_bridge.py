@@ -13,6 +13,7 @@ sys.path.insert(0,str(HERE/'vendor'/'forge'))
 from numeric_core import NumericCore
 from evidence_layer import EvidenceLayer
 from inquiry_controller import InquiryController
+from experiment_planner import ExperimentPlanner
 from equinox_forge.unified_numeric_kernel import UnifiedNumericExecutionKernel, load_unified_numeric_kernel_pack
 
 @dataclass(frozen=True)
@@ -31,6 +32,7 @@ class UUIBridge:
         self.numeric=NumericCore(kira_db)
         self.evidence=EvidenceLayer(self.numeric.db)
         self.inquiry=InquiryController(self.evidence)
+        self.planner=ExperimentPlanner(self.inquiry)
         self.forge=(UnifiedNumericExecutionKernel(load_unified_numeric_kernel_pack(forge_pack_path))
                     if forge_pack_path else None)
     def numeric_observation(self, value, *, source='observed'):
@@ -60,4 +62,14 @@ class UUIBridge:
             value=value,context=context,source_type='observation',source_ref=source_ref)
         self.inquiry.sync_reviews()
         return result
+    def ask_about(self, subject, predicate):
+        return self.inquiry.ask_about(subject, predicate)
+    def register_capability(self, capability_id, predicate, description, **kwargs):
+        return self.planner.register_capability(capability_id, predicate, description, **kwargs)
+    def propose_experiments(self, inquiry_id, *, limit=5):
+        return self.planner.propose(inquiry_id, limit=limit)
+    def approve_experiment(self, experiment_id):
+        return self.planner.approve(experiment_id)
+    def record_verified_experiment(self, experiment_id, *, event_id, value, source_ref, **kwargs):
+        return self.planner.complete(experiment_id, event_id=event_id, value=value, source_ref=source_ref, **kwargs)
     def close(self):self.numeric.close()

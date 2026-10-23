@@ -14,4 +14,16 @@ class BridgeTests(unittest.TestCase):
   b=UUIBridge()
   with self.assertRaises(RuntimeError):b.forge_query(1,2)
   b.close()
+ def test_experiment_requires_approval(self):
+  b=UUIBridge()
+  q=b.ask_about('bed','edible')
+  b.register_capability('inspect','edible','Simulated inspection',risk=0.1)
+  proposals=b.propose_experiments(q)
+  self.assertEqual(len(proposals),1)
+  eid=proposals[0]['experiment_id']
+  with self.assertRaises(ValueError):b.record_verified_experiment(eid,event_id='sim1',value=False,source_ref='sim')
+  b.approve_experiment(eid)
+  b.record_verified_experiment(eid,event_id='sim1',value=False,source_ref='sim')
+  self.assertEqual(b.evidence.evidence_for('bed','edible')[0]['value'],False)
+  b.close()
 if __name__=='__main__':unittest.main()
