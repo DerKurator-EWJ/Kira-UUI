@@ -96,5 +96,12 @@
     "module": "KIRA_UNIFIED_CORE",
     "sha256_original_zip": "6c2b851629055e311becbc98cb81481c76bc02592f698f0f20deb56871f1dc38",
     "files_in_zip": 94
+  },
+  {
+    "tag": "kira-unified-core-v1.2",
+    "source": "KIRA_UNIFIED_CORE_1_2.zip",
+    "module": "KIRA_UNIFIED_CORE",
+    "sha256_original_zip": "18f49c3d61c41d6d80f72b2bf23382a7b464c8a043b6b130df06023b3f07567c",
+    "files_in_zip": 64
   }
 ]
