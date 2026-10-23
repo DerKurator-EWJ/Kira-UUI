@@ -1,3 +1,3 @@
-# UUI Core 0.8
+# UUI Core 0.9
 
-Siehe [README_08.md](README_08.md) für semantikneutrale Relationen und Modellrevision. Ältere Versionen sind kompatibel.
+Siehe README_09.md für neue Mustererkennung. Frühere Versionen bleiben enthalten.

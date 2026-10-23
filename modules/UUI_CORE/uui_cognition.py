@@ -34,6 +34,7 @@ WILLI_RELATION_ALIASES = {
     'guck_nach': 'pruef_relation',
 }
 RELATION_OPS.update({alias: 'neutral_relations' for alias in WILLI_RELATION_ALIASES})
+PATTERN_OPS = {'find_muster':'pattern','bau_makro':'pattern','zeig_makro':'pattern'}
 assert len(ALL)==39
 
 # Operations return JSON-serializable strings where UUI 0.3 lacks maps/lists.
@@ -48,6 +49,18 @@ def invoke(name, args, runtime):
         if type(v) is not Fraction:raise ValueError(f'{name} expects a number')
         return v
     name = WILLI_RELATION_ALIASES.get(name, name)
+    if name in PATTERN_OPS:
+        if name=='find_muster':
+            arity(1); n=number(args[0]);
+            if n.denominator!=1:raise ValueError('integer required')
+            result=runtime.bridge.patterns.detect(int(n))
+        elif name=='bau_makro':
+            arity(1); n=number(args[0]);
+            if n.denominator!=1:raise ValueError('integer required')
+            result=runtime.bridge.patterns.consolidate(int(n))
+        else:
+            arity(1);result=runtime.bridge.patterns.expand(string(args[0]))
+        return json.dumps(result,ensure_ascii=False,sort_keys=True)
     # 0.8: opaque identity, explicitly typed relation and explicit dependency.
     # Labels are optional metadata, never interpreted as knowledge.
     if name in RELATION_OPS:

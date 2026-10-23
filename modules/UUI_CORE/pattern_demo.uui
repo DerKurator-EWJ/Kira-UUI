@@ -1,0 +1,13 @@
+# Two independent occurrences of the same typed chain.
+hier neues_ding("A")
+hier neues_ding("B")
+hier neues_ding("C")
+hier neues_ding("D")
+hier neues_ding("E")
+hier neues_ding("F")
+hier kleber("A", "T1", "B", "R1")
+hier kleber("B", "T2", "C", "R2")
+hier kleber("D", "T1", "E", "R3")
+hier kleber("E", "T2", "F", "R4")
+hier find_muster(2)
+hier bau_makro(2)
