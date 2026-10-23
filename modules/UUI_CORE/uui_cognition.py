@@ -23,6 +23,17 @@ FAMILIES = {
 ALL = {name: family for family, names in FAMILIES.items() for name in names}
 REVISION_OPS = {name:"revision" for name in ("pruef_revision","entscheide_revision","revision_verlauf")}
 RELATION_OPS = {name:"neutral_relations" for name in ("knoten","benenne","relation","haengt_ab_von","folgen_von","revidiere_relation","pruef_relation")}
+# Willi aliases: preserve the original API for existing UUI programs.
+WILLI_RELATION_ALIASES = {
+    'neues_ding': 'knoten',
+    'gib_name': 'benenne',
+    'kleber': 'relation',
+    'das_und_das': 'haengt_ab_von',
+    'passiert_wenn': 'folgen_von',
+    'weg_radieren': 'revidiere_relation',
+    'guck_nach': 'pruef_relation',
+}
+RELATION_OPS.update({alias: 'neutral_relations' for alias in WILLI_RELATION_ALIASES})
 assert len(ALL)==39
 
 # Operations return JSON-serializable strings where UUI 0.3 lacks maps/lists.
@@ -36,6 +47,7 @@ def invoke(name, args, runtime):
     def number(v):
         if type(v) is not Fraction:raise ValueError(f'{name} expects a number')
         return v
+    name = WILLI_RELATION_ALIASES.get(name, name)
     # 0.8: opaque identity, explicitly typed relation and explicit dependency.
     # Labels are optional metadata, never interpreted as knowledge.
     if name in RELATION_OPS:

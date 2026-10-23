@@ -13,3 +13,7 @@ Test: `python -m unittest discover -v`
 Demo: `python run_uui.py neutral_demo.uui --database :memory:`
 
 Hinweis: `neutral_demo.uui` mit einer bereits gefüllten persistenten Datenbank erneut auszuführen verursacht bewusst einen Fehler bei doppelten Relationskennungen. Für wiederholte Demos `--database :memory:` verwenden.
+
+## Willi-Namen (0.8.1)
+
+Die bevorzugten UUI-Aufrufe heißen nun `neues_ding`, `gib_name`, `kleber`, `das_und_das`, `passiert_wenn`, `weg_radieren` und `guck_nach`. Die bisherigen Namen funktionieren als Kompatibilitäts-Aliase weiterhin. `weg_radieren` ist **keine physische Löschung**: Die Relation wird als überholt markiert und ihre Historie bleibt bestehen.
