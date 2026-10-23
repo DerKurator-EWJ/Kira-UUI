@@ -8,12 +8,14 @@ from numeric_stream_v10 import NumericStreamV10
 from numeric_stream_v07 import enc, dec
 from decision_matrix import DecisionMatrix, EvaluationInput
 from evidence_layer import EvidenceLayer
+from inquiry_controller import InquiryController
 
 class EvaluatedNumericStream:
     def __init__(self,path=':memory:',max_period=16,min_savings=1):
         self.core=NumericStreamV10(path,max_period,min_savings)
         self.matrix=DecisionMatrix()
         self.evidence=EvidenceLayer(self.core.db)
+        self.inquiry=InquiryController(self.evidence)
         self.core.db.execute("""CREATE TABLE IF NOT EXISTS kira_evaluations (
             event_id TEXT PRIMARY KEY, series TEXT NOT NULL, observed TEXT NOT NULL,
             predicted TEXT, evaluation_json TEXT NOT NULL)""")
@@ -46,6 +48,8 @@ class EvaluatedNumericStream:
         if fact is not None:
             evidence=self.evidence.record(event_id=event_id, **fact)
             payload_evidence=evidence
+            if evidence["needs_review"]:
+                self.inquiry.sync_reviews()
         else:
             payload_evidence=None
         self.core.observe(series,observed)
