@@ -89,5 +89,12 @@
     "module": "UUI_BRIDGE",
     "sha256_original_zip": "44673a6efbda37674929f0d501f1ccadd0fddaa257010bb449f0f2acf771257d",
     "files_in_zip": 344
+  },
+  {
+    "tag": "kira-unified-core-v1.1",
+    "source": "KIRA_UNIFIED_CORE_1_1.zip",
+    "module": "KIRA_UNIFIED_CORE",
+    "sha256_original_zip": "6c2b851629055e311becbc98cb81481c76bc02592f698f0f20deb56871f1dc38",
+    "files_in_zip": 94
   }
 ]

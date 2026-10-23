@@ -1,0 +1,26 @@
+{
+  "100_observations_100_reads": {
+    "v05": {
+      "learn_ms_median": 6.32,
+      "predict_ms_median": 6.774,
+      "final_mode": "incremental"
+    },
+    "v06": {
+      "learn_ms_median": 10.579,
+      "predict_ms_median": 9.475,
+      "final_mode": "deferred"
+    }
+  },
+  "1000_observations_200_reads": {
+    "v05": {
+      "learn_ms_median": 56.547,
+      "predict_ms_median": 41.214,
+      "final_mode": "incremental"
+    },
+    "v06": {
+      "learn_ms_median": 110.153,
+      "predict_ms_median": 26.661,
+      "final_mode": "deferred"
+    }
+  }
+}

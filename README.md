@@ -29,3 +29,4 @@ gesondert auf persoenliche Angaben und Rechte geprueft werden.
 | `uui-core-v1.0.1` | `UUI_CORE_1_0_1.zip` | `modules/UUI_CORE/` |
 | `uui-bridge-v0.1` | `UUI_BRIDGE_0_1.zip` | `modules/UUI_BRIDGE/` |
 | `uui-bridge-v0.2` | `UUI_BRIDGE_0_2.zip` | `modules/UUI_BRIDGE/` |
+| `kira-unified-core-v1.1` | `KIRA_UNIFIED_CORE_1_1.zip` | `modules/KIRA_UNIFIED_CORE/` |
