@@ -13,7 +13,11 @@ class Token:
     position: int
 
 TOKEN = re.compile(r'''(?P<SPACE>[ \t\r]+)|(?P<COMMENT>\#[^\n]*)|(?P<NEWLINE>\n)|(?P<NUMBER>\d+(?:\.\d+)?)|(?P<STRING>"(?:\\["\\nrt]|[^"\\])*"|'(?:\\['\\nrt]|[^'\\])*')|(?P<NAME>[A-Za-z_][A-Za-z_0-9]*)|(?P<SYM>==|!=|<=|>=|[{}=()+*/;,<>!\-])|(?P<INVALID>.)''')
-KEYWORDS={'set','let','print','observe','resolve','as','if','else','while','fn','return','true','false','and','or','not'}
+ALIASES = {'was_brauchst_du':'if','geht_das':'else','hier':'print','es_sei':'let',
+           'so_nicht':'set','mach':'fn','her_damit':'return','solange':'while',
+           'pass_uff':'observe'}
+KEYWORDS={'set','let','print','observe','resolve','as','if','else','while','fn','return','true','false','and','or','not'} | set(ALIASES)
+
 
 def tokenize(source):
     out=[]
@@ -21,7 +25,7 @@ def tokenize(source):
         kind=m.lastgroup
         if kind in ('SPACE','COMMENT'): continue
         if kind=='INVALID': raise UUIError(f'Unexpected character {m.group()!r} at {m.start()}')
-        out.append(Token(kind,m.group(),m.start()))
+        out.append(Token(kind,ALIASES.get(m.group(),m.group()) if kind=='NAME' else m.group(),m.start()))
     out.append(Token('EOF','',len(source)))
     return out
 
@@ -219,5 +223,12 @@ class Runtime:
         if len(tokens)>self.max_tokens:raise UUIError('Token budget exceeded')
         statements=Parser(source,tokens).program()
         if len(statements)>self.max_statements:raise UUIError('Statement budget exceeded')
+        self.execute(statements,self.vars)
+        return list(self.output)
+
+    def run_compiled(self, statements):
+        """Execute validated UUI IR. This is an AST interpreter, NOT a native bytecode VM."""
+        if not isinstance(statements,list) or len(statements)>self.max_statements:
+            raise UUIError('Invalid compiled program size')
         self.execute(statements,self.vars)
         return list(self.output)

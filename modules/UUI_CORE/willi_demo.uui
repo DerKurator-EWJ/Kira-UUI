@@ -1,0 +1,16 @@
+# UUI 0.3: Willi-Syntax
+mach quadrat(x) {
+    her_damit x * x
+}
+es_sei zahl = 5
+es_sei ergebnis = quadrat(zahl)
+was_brauchst_du ergebnis > 20 {
+    hier "Geil!"
+    pass_uff ergebnis as "uui_willi_demo"
+} geht_das {
+    hier "Fuck!"
+}
+solange zahl > 3 {
+    hier zahl
+    so_nicht zahl = zahl - 1
+}
