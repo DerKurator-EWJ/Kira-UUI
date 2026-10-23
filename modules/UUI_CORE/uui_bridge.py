@@ -12,6 +12,7 @@ sys.path.insert(0,str(HERE/'vendor'/'kira'))
 sys.path.insert(0,str(HERE/'vendor'/'forge'))
 from uui_relations import RelationStore
 from uui_patterns import PatternStore
+from uui_sensor import SensorStore
 from numeric_core import NumericCore
 from evidence_layer import EvidenceLayer
 from inquiry_controller import InquiryController
@@ -35,6 +36,7 @@ class UUIBridge:
         self.evidence=EvidenceLayer(self.numeric.db)
         self.relations=RelationStore(self.numeric.db)
         self.patterns=PatternStore(self.relations)
+        self.sensors=SensorStore(self.relations)
         self.inquiry=InquiryController(self.evidence)
         self.planner=ExperimentPlanner(self.inquiry)
         self.forge=(UnifiedNumericExecutionKernel(load_unified_numeric_kernel_pack(forge_pack_path))

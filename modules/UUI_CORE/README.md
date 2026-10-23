@@ -1,3 +1,3 @@
-# UUI Core 0.9
+# UUI Core 1.0
 
-Siehe README_09.md für neue Mustererkennung. Frühere Versionen bleiben enthalten.
+Details: [README_10.md](README_10.md). Frühere Versionshinweise in README_06–09.md.
